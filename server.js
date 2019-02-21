@@ -206,9 +206,9 @@ apiRoutes.post('/pusher/auth', function(req, res) {
 
 
 var pusher = new Pusher({
-  appId: '719110',
-  key: 'c87fecd8c556efdec0be',
-  secret: '6a84929ea6e8ad492816',
+  appId: '719111',
+  key: '006f63484e47855233d2',
+  secret: '1147b87f7161ef80178a',
   cluster: 'ap2',
   encrypted: true
 });
@@ -221,11 +221,22 @@ function getRandomInt(min, max) {
 }
 
 var cron = require('node-cron');
-cron.schedule('*/3 * * * *', () => {
+cron.schedule('* * * * *', () => {
 	console.log('sending');
+	var random_nums = [];
+	for(var i=0;i<3;i++){
+		random_nums.push(getRandomInt(0,36));
+	}
+	var final_num = random_nums[getRandomInt(0,2)]
+	console.log({
+	  "message": "SPIN",
+	  "numbers": random_nums,
+	  "number": final_num,
+	});
 	pusher.trigger('my-channel', 'my-event', {
 	  "message": "SPIN",
-	  "number": getRandomInt(0,36)
+	  "numbers": random_nums,
+	  "number": final_num,
 	});
 })
 

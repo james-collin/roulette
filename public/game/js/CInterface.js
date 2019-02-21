@@ -98,7 +98,7 @@ function CInterface(){
                     // window.SPIN();
                     // CInterface()._onSpin()
                     console.log(data.number);
-                    if(data.number) this._onSpin(data.number);
+                    if(data.number) this._onSpin(data.number, data.numbers);
             });
         }
 
@@ -357,11 +357,11 @@ function CInterface(){
         }
     };
     
-    this._onSpin = function(num){
+    this._onSpin = function(num, nums){
             console.log('spiin');
             this.disableBetFiches();
             this.enableSpin(false);
-            s_oGame.onSpin(num);    
+            s_oGame.onSpin(num, nums);    
     };
     
     this._onClearLastBet = function(){

@@ -14,6 +14,7 @@ function CWheelAnim(iX,iY){
     var _oCurWheelSprite;
     var _oCurWheelMaskSprite;
     var _oNumExtractedText;
+    var _oNumsExtractedText
     var _oResultText;
     var _oShowNumber;
     var _oNumberColorBg;
@@ -98,7 +99,15 @@ function CWheelAnim(iX,iY){
         _oNumExtractedText.textBaseline = "middle";
         _oNumExtractedText.x = oSprite.width/2;
         _oNumExtractedText.y = oSprite.height/2 + 7;
+
+        _oNumsExtractedText = new createjs.Text("36","80px "+FONT2, "#fff");
+        _oNumsExtractedText.textAlign = "center";
+        _oNumsExtractedText.textBaseline = "middle";
+        _oNumsExtractedText.x = oSprite.width/2;
+        _oNumsExtractedText.y = oSprite.height + 100;
+
         _oShowNumber.addChild(_oNumExtractedText);
+        _oShowNumber.addChild(_oNumsExtractedText);
         
         var oSpriteResultBg = s_oSpriteLibrary.getSprite("but_bg");
         var oBgResult = createBitmap(oSpriteResultBg);
@@ -341,7 +350,7 @@ function CWheelAnim(iX,iY){
         _iCurBallIndex = 0;
     };
     
-    this.startSpin = function(iRandSpin,iStartFrame,iNumExtracted,iWin){
+    this.startSpin = function(iRandSpin,iStartFrame,iNumExtracted,iWin, nums){
         this.playToFrame(iStartFrame);
         
         _iWin = iWin;
@@ -350,12 +359,15 @@ function CWheelAnim(iX,iY){
         _bBallSpin = true;
         _oContainer.visible = true;
         
-        this.setShowNumberInfo(iNumExtracted);
+        this.setShowNumberInfo(iNumExtracted, nums);
         _bUpdate = true;
     };
     
-    this.setShowNumberInfo = function(iNumExtracted){
+    this.setShowNumberInfo = function(iNumExtracted, nums){
         _oNumExtractedText.text = iNumExtracted;
+        _oNumsExtractedText.text = '';
+        for(var i=0;i<nums.length;i++) _oNumsExtractedText.text += nums[i] + ' ';
+        // _oNumsExtractedText.text = '1, 21, 17';
         if(_iWin > 0){
             _oResultText.font = "18px "+FONT1;
             _oResultText.text = TEXT_YOU_WIN + " "+_iWin+TEXT_CURRENCY;

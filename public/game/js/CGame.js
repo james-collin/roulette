@@ -130,7 +130,7 @@ function CGame(oData){
         }
     };
     
-    this._startRouletteAnim = function(num){
+    this._startRouletteAnim = function(num, nums){
         _oInterface.disableBetFiches();
 
         // _iNumberExtracted = this._generateWinLoss();
@@ -141,11 +141,11 @@ function CGame(oData){
         _iFactor = 0;
     };
     
-    this._startBallSpinAnim = function(){
+    this._startBallSpinAnim = function(num, nums){
         var aNumbersBetted=_oMySeat.getNumbersBetted();
         var oWins=aNumbersBetted[_iNumberExtracted];
         var iWin=roundDecimal(oWins.win,2);
-        _oWheelAnim.startSpin(0,s_oGameSettings.getFrameForBallSpin(0,_iNumberExtracted),_iNumberExtracted,iWin);
+        _oWheelAnim.startSpin(0,s_oGameSettings.getFrameForBallSpin(0,_iNumberExtracted),_iNumberExtracted,iWin, nums);
     };
     
     this._generateWinLoss = function(){
@@ -283,7 +283,7 @@ function CGame(oData){
         $(s_oMain).trigger("recharge");
     };
     
-    this.onSpin = function(num){
+    this.onSpin = function(num, nums){
         if(_oNeighborsPanel.isVisible()){
                 _oNeighborsPanel.onExit();
         }
@@ -311,8 +311,8 @@ function CGame(oData){
         
         $(s_oMain).trigger("bet_placed",_oMySeat.getCurBet());
         
-        this._startRouletteAnim(num);
-        this._startBallSpinAnim();
+        this._startRouletteAnim(num, nums);
+        this._startBallSpinAnim(num, nums);
 
         this._setState(STATE_GAME_SPINNING);
 		
