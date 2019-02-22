@@ -9,6 +9,8 @@ var fs          = require('fs');
 var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var config = require('./config'); // get our config file
 var User   = require('./app/models/user'); // get our mongoose model
+var path = require('path');
+
 
 
 // configuration ===================================================
@@ -23,6 +25,7 @@ app.use(bodyParser.json());
 // use morgan to log requests to the console
 app.use(morgan('dev'));
 app.use(express.static('public'))
+
 
 
 // routes ==========================================================
@@ -47,6 +50,29 @@ app.get('/', function(req, res) {
 	res.send('Hello! The API is at http://localhost:' + port + '/api');
 });
 
+app.get('/login', function(req, res) {
+	fs.readFile('public/login.html',function (err, data){
+    	console.log(data);
+        res.writeHead(200, {'Content-Type': 'text/html','Content-Length':data.length});
+        res.write(data);
+        res.end();
+    });
+});
+app.post('/signup', function(req, res) {
+	var newUser = new User({ 
+		name: req.body.username,
+		email: req.body.email,
+		password: req.body.password
+	});
+	newUser.save(function(err) {
+		if (err) throw err;
+
+		console.log('User saved successfully');
+		// res.redirect('login/');
+		res.json({ success: true });
+	});
+
+})
 // get an instance of the router for api routes
 var apiRoutes = express.Router(); 
 
@@ -54,7 +80,7 @@ var apiRoutes = express.Router();
 // authentication (no middleware necessary since this isnt authenticated)
 // ---------------------------------------------------------
 // http://localhost:8080/api/authenticate
-apiRoutes.post('/authenticate', function(req, res) {
+apiRoutes.post('/game', function(req, res) {
 
 	// find the user
 	User.findOne({
@@ -80,7 +106,14 @@ apiRoutes.post('/authenticate', function(req, res) {
 				var token = jwt.sign(payload, app.get('superSecret'), {
 					expiresIn: 86400 // expires in 24 hours
 				});
-				res.redirect('/api/game?token=' + token)
+				// res.redirect('/api/game?token=' + token)
+
+				fs.readFile('public/game/index.html',function (err, data){
+			    	console.log(data);
+			        res.writeHead(200, {'Content-Type': 'text/html','Content-Length':data.length, 'x-access-token': token});
+			        res.write(data);
+			        res.end();
+			    });
 
 				// res.json({
 				// 	success: true,
@@ -128,7 +161,7 @@ var checkAuth = function(req, res, next) {
 
 // route middleware to authenticate and check token
 apiRoutes.use(function(req, res, next) {
-
+	console.log(req.user);
 	// check header or url parameters or post parameters for token
 	var token = req.body.token || req.param('token') || req.headers['x-access-token'];
 
@@ -158,6 +191,8 @@ apiRoutes.use(function(req, res, next) {
 	}
 	
 });
+
+// apiRoutes.use('/admin', express.static(path.join(__dirname, 'public')));
 
 // authenticated routes
 apiRoutes.get('/', function(req, res) {
