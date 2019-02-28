@@ -312,7 +312,7 @@
                 }
             }).done(function(res) {
                 console.log(res);
-                if(res.success) initializeGame(res.credit);
+                if(res.success) initializeGame((res.credit) ? res.credit : 1000);
             }).fail(function(err){
                 console.log(err);
             });
