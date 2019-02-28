@@ -5,10 +5,33 @@ function CSeat(){
     var _aNumbersSelected;
     var _aLastBetWinHistory;
     var _oFicheController;
+    var xmlRequest;
     
     this._init = function(){
         this.reset();
     };
+
+    this.updateCredit = function(){
+        if(xmlRequest)  xmlRequest.abort();
+        xmlRequest = $.ajax({
+            url: "/api/game/user",
+            headers: {
+                'x-access-token': getCookie('token')
+            },
+            method: 'POST',
+            data: {
+                credit: _iCredit
+            }
+        }).done(function(res) {
+            console.log(res);
+        }).fail(function(err){
+            if(err.status == 403){
+                console.warn('ABORT!!');
+                alert('Please login');
+                window.location= '/login';
+            }
+        });
+    }
     
     this.reset = function(){
         _aNumberBetted=new Array();
@@ -61,6 +84,8 @@ function CSeat(){
         _iCurBet = parseFloat(_iCurBet.toFixed(2));
         _iCredit -= iAmount;
         _iCredit = roundDecimal(_iCredit, 1);
+
+        this.updateCredit(_iCredit);
     };
     
     this.createPileForVoisinZero = function(iFicheValue,iIndexFicheSelected,aNumbers,iBetMult,iNumFiches){
@@ -119,6 +144,7 @@ function CSeat(){
         _iCurBet+= iAmount;
         _iCredit -= iAmount;
         _iCredit = roundDecimal(_iCredit, 1);
+        this.updateCredit(_iCredit);
         
         _aLastBetWinHistory.push({win:aTmpWin,mc:aFichesMc});
     };
@@ -143,6 +169,7 @@ function CSeat(){
         var iBet = _oFicheController.clearLastBet();
         _iCredit += iBet;
         _iCredit = roundDecimal(_iCredit, 1);
+        this.updateCredit(_iCredit);
         _iCurBet -= iBet;
 
         var aLastNums = _aNumbersSelected.pop();
@@ -166,6 +193,7 @@ function CSeat(){
         _oFicheController.clearAllBets();
         _iCredit += _iCurBet;
         _iCredit = roundDecimal(_iCredit, 1);
+        this.updateCredit(_iCredit);
         _iCurBet=0;
 
     };
@@ -173,7 +201,7 @@ function CSeat(){
     this.showWin = function(iWin){
         _iCredit += iWin;
         _iCredit = roundDecimal(_iCredit, 1);
-
+        this.updateCredit(_iCredit);
     };
     
     this.recharge = function(iMoney) {

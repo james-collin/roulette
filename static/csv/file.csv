@@ -1,0 +1,16 @@
+date,number,colour,1-18 / 19-36,odd / even,dozen,column,three,six,corners,call,neighbours
+Fri Mar 01 2019 01:12:00 GMT+0530 (India Standard Time),30,R,SH,even,third,three,G,25-30,r-t,thirds of the wheel,36-11-8-23
+Fri Mar 01 2019 01:30:00 GMT+0530 (India Standard Time),32,R,SH,even,third,two,K,31-36,s-t-u-v,"neighbours of zero, zero game",26-0-15-19
+Fri Mar 01 2019 01:18:00 GMT+0530 (India Standard Time),21,R,SH,odd,second,three,G,19-24,l-n,neighbours of zero,19-4-2-25
+Fri Mar 01 2019 01:21:00 GMT+0530 (India Standard Time),26,B,SH,even,third,two,I,25-30,o-p-q-s,"neighbours of zero, zero game",35-3-0-32
+Fri Mar 01 2019 01:24:00 GMT+0530 (India Standard Time),27,R,SH,odd,third,three,I,25-30,p-r,thirds of the wheel,34-6-13-36
+Fri Mar 01 2019 01:27:00 GMT+0530 (India Standard Time),13,B,FH,odd,second,one ,E,13-18,g-i,thirds of the wheel,6-27-36-11
+Fri Mar 01 2019 01:30:00 GMT+0530 (India Standard Time),32,R,SH,even,third,two,K,31-36,s-t-u-v,"neighbours of zero, zero game",26-0-15-19
+Fri Mar 01 2019 01:33:00 GMT+0530 (India Standard Time),22,B,SH,even,second,one ,H,19-24,m-o,neighbours of zero,31-9-18-29
+Fri Mar 01 2019 01:39:00 GMT+0530 (India Standard Time),4,B,FH,even,first,one ,B,1-6,a-c,neighbours of zero,15-19-21-2
+Fri Mar 01 2019 01:42:00 GMT+0530 (India Standard Time),5,R,FH,odd,first,two,B,1-6,a-b-c-d,thirds of the wheel,23-10-24-16
+Fri Mar 01 2019 01:48:00 GMT+0530 (India Standard Time),19,R,SH,odd,second,one ,G,19-24,k-m,neighbours of zero,32-15-4-21
+Fri Mar 01 2019 01:51:00 GMT+0530 (India Standard Time),18,R,FH,even,second,three,F,13-18,j-l,neighbours of zero,9-22-29-7
+Fri Mar 01 2019 01:54:00 GMT+0530 (India Standard Time),25,R,SH,odd,third,one ,I,25-30,o-q,neighbours of zero,21-2-17-34
+Fri Mar 01 2019 01:57:00 GMT+0530 (India Standard Time),34,R,SH,even,third,one ,L,31-36,u,the orphans,25-17-6-27
+Fri Mar 01 2019 02:00:00 GMT+0530 (India Standard Time),31,B,SH,odd,third,one ,K,31-36,s-u, ,20-14-9-22

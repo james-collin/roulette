@@ -258,7 +258,7 @@ function CInterface(){
     };
     
     this.enableSpin = function(bEnable){
-        _oSpinBut.setVisible(bEnable);
+        // _oSpinBut.setVisible(bEnable);
     };
     
     this._initFichesBut = function(){

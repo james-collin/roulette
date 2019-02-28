@@ -92,6 +92,8 @@ function getSize(Name) {
         // Default to use window["inner" + Name]
         size = window["inner" + Name];
     }
+    console.log(size);
+    // size = (Name == 'Height') ? size - 55:  size;
     return size;
 };
 

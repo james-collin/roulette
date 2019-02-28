@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="/game/css/reset.css" type="text/css">
         <link rel="stylesheet" href="/game/css/main.css" type="text/css">
         <link rel="stylesheet" href="/game/css/orientation_utils.css" type="text/css">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css" type="text/css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
@@ -46,108 +47,311 @@
         <script type="text/javascript" src="/game/js/CHistory.js"></script>
         <script type="text/javascript" src="/game/js/CRollingTextController.js"></script>
         <script src="https://js.pusher.com/4.4/pusher.min.js"></script>
+        <style>
+            /* make sidebar nav vertical */ 
+            @media (min-width: 768px) {
+              .sidebar-nav .navbar .navbar-collapse {
+                padding: 0;
+                max-height: none;
+              }
+              .sidebar-nav .navbar ul {
+                float: none;
+                display: block;
+              }
+              .sidebar-nav .navbar li {
+                float: none;
+                display: block;
+              }
+              .sidebar-nav .navbar li a {
+                padding-top: 12px;
+                padding-bottom: 12px;
+              }
+              .navbar-nav > li > a{
+                padding: 12px 13px;
+              }
+            }
+            h1:not(.jumbotron-title){
+                text-align: center;
+                background: #9b9393;
+                margin: 0px;
+                padding: 10px;
+            }
 
+            .jumbotron {
+                position: relative;
+                color: #fff;
+                background-color: #1D6B87;
+                padding: 4.3rem 0;
+                margin: 0;
+                border-radius: 0;
+                text-align: center;
+            }
+            .jumbotron .container{
+                max-width: 80%;
+            }
+
+        </style>
         
     </head>
     <body ondragstart="return false;" ondrop="return false;" >
-	<div style="position: fixed; background-color: transparent; top: 0px; left: 0px; width: 100%; height: 100%"></div>
-          <script>
-            $(document).ready(function(){
-                     var oMain = new CMain({
-                                            money: 1000,         //STARING CREDIT FOR THE USER
-                                            min_bet: 0.1,       //MINIMUM BET
-                                            max_bet: 1000,      //MAXIMUM BET
-                                            time_bet: 0,        //TIME TO WAIT FOR A BET IN MILLISECONDS. SET 0 IF YOU DON'T WANT BET LIMIT
-                                            time_winner: 1500,  //TIME FOR WINNER SHOWING IN MILLISECONDS    
-                                            win_occurrence: 30, //Win occurrence percentage (100 = always win). 
-                                                                //SET THIS VALUE TO -1 IF YOU WANT WIN OCCURRENCE STRICTLY RELATED TO PLAYER BET ( SEE DOCUMENTATION)
-                                            casino_cash:1000,   //The starting casino cash that is recharged by the money lost by the user
-                                            fullscreen:true, //SET THIS TO FALSE IF YOU DON'T WANT TO SHOW FULLSCREEN BUTTON
-                                            check_orientation:true,     //SET TO FALSE IF YOU DON'T WANT TO SHOW ORIENTATION ALERT 
-                                            show_credits:true,                     //ENABLE/DISABLE CREDITS BUTTON IN THE MAIN SCREEN
-                                            num_hand_before_ads:10                 //NUMBER OF HANDS PLAYED BEFORE AD SHOWN
-                                            //
-                                            //// THIS FUNCTIONALITY IS ACTIVATED ONLY WITH CTL ARCADE PLUGIN.///////////////////////////
-                                            /////////////////// YOU CAN GET IT AT: /////////////////////////////////////////////////////////
-                                            // http://codecanyon.net/item/ctl-arcade-wordpress-plugin/13856421 ///////////
-                                });
 
-                     
-                     $(oMain).on("recharge", function(evt) {
-                             //alert("recharge");
-                     });
-                     
-                     $(oMain).on("start_session", function(evt) {
-                            if(getParamValue('ctl-arcade') === "true"){
-                                parent.__ctlArcadeStartSession();
-                            }
-                            //...ADD YOUR CODE HERE EVENTUALLY
-                     });
-                     
-                    $(oMain).on("end_session", function(evt) {
-                            if(getParamValue('ctl-arcade') === "true"){
-                                parent.__ctlArcadeEndSession();
-                            }
-                            //...ADD YOUR CODE HERE EVENTUALLY
+        <div class="container" style="position: fixed;z-index: 999;top: 100px;width: fit-content;">
+            <div class="row">
+                <div class="col-sm-3" style="width: fit-content;height: 100%;border-color: #e7e7e7;padding: 0px 5px;">
+                    <div class="sidebar-nav" style="font-size: 13px;">
+                        <div class="navbar navbar-default" role="navigation">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+                                                        <span class="sr-only">Toggle navigation</span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                    </button>
+                                <span class="visible-xs navbar-brand">Sidebar menu</span>
+                            </div>
+                            <div class="navbar-collapse collapse sidebar-navbar-collapse">
+                                <ul class="nav navbar-nav" id="nav-buttons">
+                                    <li data-action="aboutus" class="active"><a href="#">About us</a></li>
+                                    <!-- <li data-action="see"><a href="#">See</a></li> -->
+                                    <li data-action="play"><a href="#">Play</a></li>
+                                    <li data-action="download"><a href="#">Download</a></li>
+                                    <li data-action="info"><a href="#">Info</a></li>
+                                    <li data-action="contacts"><a href="#">Contacts</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+	<!-- <div style="position: fixed; background-color: transparent; top: 0px; left: 0px; width: 100%; height: 100%"></div> -->
+
+    <div style="display: none;" data-page="aboutus">
+        <h1>About Us</h1>
+        <section class="jumbotron" style="">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md  content-wrapper">
+                        <h1 class="jumbotron-title display-1">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, numquam</p>
+                        </h1>
+                        <h5 class="jumbotron-subtitle">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi necessitatibus, quis autem iusto? Ratione assumenda sunt neque, explicabo minus consectetur harum. Voluptates quis, blanditiis doloribus! Quaerat ducimus magni animi, molestiae voluptatem beatae maxime! Tempora aliquam mollitia autem porro, dicta aut atque ipsa vero omnis. Aperiam, eos pariatur minima, ab mollitia perspiciatis, nostrum asperiores temporibus quibusdam expedita corporis. Eius eos autem, accusantium debitis libero tempora consequatur reprehenderit sint ut mollitia aliquid illo quasi molestias! Temporibus harum voluptatibus omnis, illo ullam? Soluta eius neque numquam quae inventore tenetur voluptatum sapiente voluptatem voluptas quidem similique consequatur rem quam illum itaque debitis natus doloremque, at facere expedita, autem, qui non, nostrum eaque. Explicabo cumque, quidem iste. Vero voluptate id eaque eos magnam nam, dolorem obcaecati tempora numquam, dolorum officiis, reiciendis excepturi, doloribus sed iste temporibus explicabo ducimus magni. Quis inventore unde doloremque ducimus, incidunt enim ipsa tenetur. Est deserunt, quibusdam. Facere earum quidem asperiores a eaque, inventore eveniet. Similique itaque deleniti blanditiis praesentium ab harum obcaecati asperiores, animi voluptates omnis odit repudiandae fuga laboriosam repellendus delectus dolore neque modi adipisci alias totam reprehenderit qui laudantium iusto! Atque, culpa ipsam quaerat voluptates nesciunt, laborum illum praesentium voluptatibus, nam consectetur esse. Minus sed aliquid tempora impedit.</p>
+                        </h5>
+                    </div>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <div class="jumbotron-overlay"></div>
+        </section>
+    </div>
+
+    <div style="display: none;text-align: center;" data-page="download">
+        <h1>Download</h1>
+        <button class="btn btn-primary" style="margin-top: 20px;" onClick="downloadcsv()">Download excel file</button>
+    </div>
+
+    <div style="display: none;" data-page="info">
+        <h1>Info</h1>
+    </div>
+
+    <div style="display: none;" data-page="contacts">
+        <h1>Contacts</h1>
+        <section class="jumbotron" style="">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md  content-wrapper">
+                        <h1 class="jumbotron-title display-1">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, numquam</p>
+                        </h1>
+                        <h5 class="jumbotron-subtitle">
+                            itiis praesentium ab harum obcaecati asperiores, animi voluptates omnis odit repudiandae fuga laboriosam repellendus delectus dolore neque modi adipisci alias totam reprehenderit qui laudantium iusto! Atque, culpa ipsam quaerat voluptates nesciunt, laborum illum praesentium voluptatibus, nam consectetur esse. Minus sed aliquid tempora impedit.</p>
+                        </h5>
+
+                    </div>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <div class="jumbotron-overlay"></div>
+        </section>
+    </div>
+
+
+          <script>
+
+            function getCookie(cname) {
+                var name = cname + "=";
+                var ca = document.cookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+                }
+                return undefined;
+            };
+
+            function downloadcsv(){
+                window.open('/api/csv?token=' + getCookie('token'));
+                // $.ajax({
+                //     url: "/api/csv",
+                //     headers: {
+                //         'x-access-token': getCookie('token')
+                //     }
+                // }).done(function(res) {
+                //     console.log(res);
+                // }).fail(function(err){
+                //     console.log(err);
+                // });
+            }
+
+            var initializeGame = function(credit){
+                $(document).ready(function(){
+
+
+
+                    function showOrHideGame(attr){
+                        if(attr == 'play'){
+                            jQuery('#canvas').show();
+                        }
+                        else jQuery('#canvas').hide();
+                        jQuery('[data-page]').hide();
+                        jQuery('[data-page="' + attr +'"]').show();
+                    }
+                    jQuery('#nav-buttons li').each(function(itr, li){
+                        jQuery(li).click(function(){
+                                showOrHideGame(jQuery(li).attr('data-action'))
+                                jQuery('#nav-buttons li').removeClass('active');
+                                jQuery(li).addClass('active');
+                        });
                     });
-                    
-                    $(oMain).on("bet_placed", function (evt, iTotBet) {
-                        //...ADD YOUR CODE HERE EVENTUALLY
-                    });
-                    
-                    $(oMain).on("save_score", function(evt,iMoney) {
-							
-                            if(getParamValue('ctl-arcade') === "true"){
-                                parent.__ctlArcadeSaveScore({score:iMoney});
-                            }
+                    showOrHideGame('aboutus');
+
+                         var oMain = new CMain({
+                                                money: credit,         //STARING CREDIT FOR THE USER
+                                                min_bet: 0.1,       //MINIMUM BET
+                                                max_bet: 1000,      //MAXIMUM BET
+                                                time_bet: 0,        //TIME TO WAIT FOR A BET IN MILLISECONDS. SET 0 IF YOU DON'T WANT BET LIMIT
+                                                time_winner: 1500,  //TIME FOR WINNER SHOWING IN MILLISECONDS    
+                                                win_occurrence: 30, //Win occurrence percentage (100 = always win). 
+                                                                    //SET THIS VALUE TO -1 IF YOU WANT WIN OCCURRENCE STRICTLY RELATED TO PLAYER BET ( SEE DOCUMENTATION)
+                                                casino_cash:1000,   //The starting casino cash that is recharged by the money lost by the user
+                                                fullscreen:true, //SET THIS TO FALSE IF YOU DON'T WANT TO SHOW FULLSCREEN BUTTON
+                                                check_orientation:true,     //SET TO FALSE IF YOU DON'T WANT TO SHOW ORIENTATION ALERT 
+                                                show_credits:true,                     //ENABLE/DISABLE CREDITS BUTTON IN THE MAIN SCREEN
+                                                num_hand_before_ads:10                 //NUMBER OF HANDS PLAYED BEFORE AD SHOWN
+                                                //
+                                                //// THIS FUNCTIONALITY IS ACTIVATED ONLY WITH CTL ARCADE PLUGIN.///////////////////////////
+                                                /////////////////// YOU CAN GET IT AT: /////////////////////////////////////////////////////////
+                                                // http://codecanyon.net/item/ctl-arcade-wordpress-plugin/13856421 ///////////
+                                    });
+
+                         
+                         $(oMain).on("recharge", function(evt) {
+                                 //alert("recharge");
+                         });
+                         
+                         $(oMain).on("start_session", function(evt) {
+                                if(getParamValue('ctl-arcade') === "true"){
+                                    parent.__ctlArcadeStartSession();
+                                }
+                                //...ADD YOUR CODE HERE EVENTUALLY
+                         });
+                         
+                        $(oMain).on("end_session", function(evt) {
+                                if(getParamValue('ctl-arcade') === "true"){
+                                    parent.__ctlArcadeEndSession();
+                                }
+                                //...ADD YOUR CODE HERE EVENTUALLY
+                        });
+                        
+                        $(oMain).on("bet_placed", function (evt, iTotBet) {
                             //...ADD YOUR CODE HERE EVENTUALLY
-                     });
-                     
-                     $(oMain).on("show_interlevel_ad", function(evt) {
-                            if(getParamValue('ctl-arcade') === "true"){
-                                parent.__ctlArcadeShowInterlevelAD();
-                            }
-                            //...ADD YOUR CODE HERE EVENTUALLY
-                     });
-                     
-                     $(oMain).on("share_event", function(evt,iMoney) {
-                            if(getParamValue('ctl-arcade') === "true"){
-                                parent.__ctlArcadeShareEvent({ img:"200x200.jpg",
-                                                                title:TEXT_CONGRATULATIONS,
-                                                                msg:TEXT_SHARE_1 + iMoney + TEXT_SHARE_2,
-                                                                msg_share:TEXT_SHARE_3 + iMoney + TEXT_SHARE_4
-                                                            });
-                            }
-                            //...ADD YOUR CODE HERE EVENTUALLY
-                     });
-                     
-                     if(isIOS()){
-                         setTimeout(function(){sizeHandler();},200);
-                     }else{
-                         sizeHandler();
-                     }
-           });
+                        });
+                        
+                        $(oMain).on("save_score", function(evt,iMoney) {
+    							
+                                if(getParamValue('ctl-arcade') === "true"){
+                                    parent.__ctlArcadeSaveScore({score:iMoney});
+                                }
+                                //...ADD YOUR CODE HERE EVENTUALLY
+                         });
+                         
+                         $(oMain).on("show_interlevel_ad", function(evt) {
+                                if(getParamValue('ctl-arcade') === "true"){
+                                    parent.__ctlArcadeShowInterlevelAD();
+                                }
+                                //...ADD YOUR CODE HERE EVENTUALLY
+                         });
+                         
+                         $(oMain).on("share_event", function(evt,iMoney) {
+                                if(getParamValue('ctl-arcade') === "true"){
+                                    parent.__ctlArcadeShareEvent({ img:"200x200.jpg",
+                                                                    title:TEXT_CONGRATULATIONS,
+                                                                    msg:TEXT_SHARE_1 + iMoney + TEXT_SHARE_2,
+                                                                    msg_share:TEXT_SHARE_3 + iMoney + TEXT_SHARE_4
+                                                                });
+                                }
+                                //...ADD YOUR CODE HERE EVENTUALLY
+                         });
+                         
+                         if(isIOS()){
+                             setTimeout(function(){sizeHandler();},200);
+                         }else{
+                             sizeHandler();
+                         }
+                });
+            }
+
+            $.ajax({
+                url: "/api/game/user",
+                headers: {
+                    'x-access-token': getCookie('token')
+                }
+            }).done(function(res) {
+                console.log(res);
+                if(res.success) initializeGame(res.credit);
+            }).fail(function(err){
+                console.log(err);
+            });
 
         </script>
         <canvas id="canvas" class='ani_hack' width="1280" height="768"> </canvas>
         <div data-orientation="landscape" class="orientation-msg-container"><p class="orientation-msg-text">Please rotate your device</p></div>
-        <div id="block_game" style="position: fixed; background-color: transparent; top: 0px; left: 0px; width: 100%; height: 100%; display:none"></div>
+        <div id="block_games" style="position: fixed; background-color: transparent; top: 0px; left: 0px; width: 100%; height: 100%; display:none"></div>
         <script>
+
+            $.ajax({
+                url: "/api/check",
+                headers: {
+                    'x-access-token': getCookie('token')
+                }
+            }).done(function(res) {
+                console.log(res);
+            }).fail(function(err){
+                if(err.status == 403){
+                    console.warn('ABORT!!');
+                    alert('Please login');
+                    window.location= '/login';
+                }
+            });
             Pusher.logToConsole = true;
 
             // var pusher = new Pusher('301536b9c5b32f83e434', {
             //   cluster: 'ap2',
             //   forceTLS: true
             // });
-            var pusher = new Pusher('006f63484e47855233d2', {
+            var pusher = new Pusher('c87fecd8c556efdec0be', {
               cluster: 'ap2',
-              authEndpoint: 'http://localhost:8080/api/pusher/auth',
-              auth: {
-                    headers: {
-                        'x-access-token': window.location.search.replace('?token=', '')
-                    }
-                },
-              forceTLS: true
+              authEndpoint: '/api/pusher/auth',
+              // auth: {
+              //       headers: {
+              //           'x-access-token': window.location.search.replace('?token=', '')
+              //       }
+              //   },
+              // forceTLS: true
             });
             console.log(pusher);
 

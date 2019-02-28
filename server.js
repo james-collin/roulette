@@ -9,8 +9,13 @@ var fs          = require('fs');
 var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var config = require('./config'); // get our config file
 var User   = require('./app/models/user'); // get our mongoose model
+var WonStore   = require('./app/models/won_number'); // get our mongoose model
 var path = require('path');
-
+var cookieParser = require('cookie-parser')
+var db_utils = require('./app/utils/db.js')
+var csvFilePath = './static/csv/file.csv';
+var winning_num_constants = require('./app/constants/constants.json')
+const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 
 // configuration ===================================================
@@ -25,6 +30,7 @@ app.use(bodyParser.json());
 // use morgan to log requests to the console
 app.use(morgan('dev'));
 app.use(express.static('public'))
+app.use(cookieParser());
 
 
 
@@ -32,12 +38,12 @@ app.use(express.static('public'))
 app.get('/setup', function(req, res) {
 
 	// create a sample user
-	var nick = new User({ 
+	var mohan = new User({ 
 		name: 'mohan', 
 		password: 'password',
 		admin: true 
 	});
-	nick.save(function(err) {
+	mohan.save(function(err) {
 		if (err) throw err;
 
 		console.log('User saved successfully');
@@ -52,11 +58,11 @@ app.get('/', function(req, res) {
 
 app.get('/login', function(req, res) {
 	fs.readFile('public/login.html',function (err, data){
-    	console.log(data);
-        res.writeHead(200, {'Content-Type': 'text/html','Content-Length':data.length});
-        res.write(data);
-        res.end();
-    });
+		console.log(data);
+		res.writeHead(200, {'Content-Type': 'text/html','Content-Length':data.length});
+		res.write(data);
+		res.end();
+	});
 });
 app.post('/signup', function(req, res) {
 	var newUser = new User({ 
@@ -101,7 +107,8 @@ apiRoutes.post('/game', function(req, res) {
 				// if user is found and password is right
 				// create a token
 				var payload = {
-					admin: user.admin	
+					admin: user.admin,
+					id: user.id
 				}
 				var token = jwt.sign(payload, app.get('superSecret'), {
 					expiresIn: 86400 // expires in 24 hours
@@ -109,11 +116,12 @@ apiRoutes.post('/game', function(req, res) {
 				// res.redirect('/api/game?token=' + token)
 
 				fs.readFile('public/game/index.html',function (err, data){
-			    	console.log(data);
-			        res.writeHead(200, {'Content-Type': 'text/html','Content-Length':data.length, 'x-access-token': token});
-			        res.write(data);
-			        res.end();
-			    });
+					console.log(data);
+					res.cookie('token', token, { maxAge: 900000});
+					res.writeHead(200, {'Content-Type': 'text/html','Content-Length':data.length, 'x-access-token': token});			        
+					res.write(data);
+					res.end();
+				});
 
 				// res.json({
 				// 	success: true,
@@ -207,6 +215,9 @@ apiRoutes.get('/users', function(req, res) {
 
 apiRoutes.get('/check', function(req, res) {
 	console.log('check');
+	console.log(db_utils);	
+	// console.log(req.cookies);
+	console.log(req.decoded);
 	res.json(req.decoded);
 });
 
@@ -216,13 +227,13 @@ apiRoutes.get('/check', function(req, res) {
 apiRoutes.get('/game', function(req, res) {
 	console.log('game');
 	var token = req.body.token || req.param('token') || req.headers['x-access-token'];
-    // res.redirect('/game/?token=' + token);
-    fs.readFile('public/game/index.html',function (err, data){
-    	console.log(data);
-        res.writeHead(200, {'Content-Type': 'text/html','Content-Length':data.length, 'x-access-token': token});
-        res.write(data);
-        res.end();
-    });
+	// res.redirect('/game/?token=' + token);
+	fs.readFile('public/game/index.html',function (err, data){
+		console.log(data);
+		res.writeHead(200, {'Content-Type': 'text/html','Content-Length':data.length, 'x-access-token': token});
+		res.write(data);
+		res.end();
+	});
 });
 
 
@@ -233,17 +244,50 @@ app.listen(port);
 var Pusher = require('pusher');
 
 apiRoutes.post('/pusher/auth', function(req, res) {
-  var socketId = req.body.socket_id;
-  var channel = req.body.channel_name;
-  var auth = pusher.authenticate(socketId, channel);
-  res.send(auth);
+	var socketId = req.body.socket_id;
+	var channel = req.body.channel_name;
+	var auth = pusher.authenticate(socketId, channel);
+	res.send(auth);
+});
+
+apiRoutes.post('/game/user', function(req, res) {
+	console.log('req.cookie');
+	console.log(req.decoded);
+	db_utils.findUserByID(req.decoded.id, function(user){
+		if(!user) console.log('No user found');
+		else{
+			user.credit = req.body.credit;
+			user.save(function(err) {
+				if (err) throw err;
+				
+				console.log('User updated successfully');
+				res.json({ success: true });
+			})
+		}
+	});
+
+	console.log(req.user);
+	console.log(req.body);
+});
+
+apiRoutes.get('/game/user', function(req, res) {
+	console.log('/game/user/game/user/game/user/game/user/game/user');
+	db_utils.findUserByID(req.decoded.id, function(user){
+		if(!user) console.log('No user found');
+		else{
+			console.log('User founddd');
+			console.log({ success: true, credit: user.credit});
+			res.json({ success: true, credit: user.credit});
+		}
+	});
+	console.log(req.body);
 });
 
 
 var pusher = new Pusher({
-  appId: '719111',
-  key: '006f63484e47855233d2',
-  secret: '1147b87f7161ef80178a',
+  appId: '719110',
+  key: 'c87fecd8c556efdec0be',
+  secret: '6a84929ea6e8ad492816',
   cluster: 'ap2',
   encrypted: true
 });
@@ -256,23 +300,86 @@ function getRandomInt(min, max) {
 }
 
 var cron = require('node-cron');
-cron.schedule('* * * * *', () => {
+cron.schedule('*/3 * * * *', () => {
 	console.log('sending');
 	var random_nums = [];
 	for(var i=0;i<3;i++){
 		random_nums.push(getRandomInt(0,36));
 	}
-	var final_num = random_nums[getRandomInt(0,2)]
+	var final_num = random_nums[getRandomInt(0,2)];
+	
+	var won_num = new WonStore({ 
+		won: final_num 
+	});
+	won_num.save(function(err) {
+		if (err) throw err;
+		console.log('Winning number stored successfully');
+	});
+
 	console.log({
 	  "message": "SPIN",
 	  "numbers": random_nums,
 	  "number": final_num,
 	});
+	console.log(winning_num_constants);
 	pusher.trigger('my-channel', 'my-event', {
 	  "message": "SPIN",
 	  "numbers": random_nums,
 	  "number": final_num,
 	});
+});
+
+
+
+var csvDump = function(){
+	const csvWriter = createCsvWriter({
+	    path: csvFilePath,
+	    // append: true,
+	    header: [
+	    	{id: "date", title: "date"},
+	        {id: "number", title: "number"},
+			{id: "colour", title: "colour"},
+			{id: "1-18 / 19-36", title: "1-18 / 19-36"},
+			{id: "odd / even", title: "odd / even"},
+			{id: "dozen", title: "dozen"},
+			{id: "column", title: "column"},
+			{id: "three", title: "three"},
+			{id: "six", title: "six"},
+			{id: "corners", title: "corners"},
+			{id: "call", title: "call"},
+			{id: "neighbours", title: "neighbours"},
+	    ]
+	});
+
+	WonStore.find({}, function(err, nums) {
+		if(err) throw err;
+		// console.log(nums);
+		let wons = nums.map((num) => {
+			let won = winning_num_constants[num['won']];
+			won['date'] = num['date'];
+			return won;
+		});
+		console.log(wons);
+		csvWriter.writeRecords(wons)       // returns a promise
+		.then(() => {
+		    console.log('...Done');
+		});
+	});
+
+
+	// csvWriter.writeRecords(records)       // returns a promise
+	// .then(() => {
+	//     console.log('...Done');
+	// });
+}
+csvDump();
+
+
+
+apiRoutes.get('/csv', function(req, res) {
+	csvDump();
+	res.sendFile(path.join(__dirname, csvFilePath));
 })
+
 
 

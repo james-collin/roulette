@@ -3,7 +3,11 @@ var Schema = mongoose.Schema;
 
 // set up a mongoose model
 module.exports = mongoose.model('User', new Schema({ 
-	name: String, 
+	name: {
+		type: String,
+		unique: true
+	}, 
 	password: String, 
-	admin: Boolean 
+	admin: Boolean,
+	credit: Number
 }));

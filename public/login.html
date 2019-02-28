@@ -233,22 +233,22 @@
 				<form action="/api/game" method="post">
 				
 					<div class="field-wrap">
-					<label>
-						Email Address<span class="req">*</span>
-					</label>
-					<input type="text" name="name" required autocomplete="off"/>
-				</div>
+						<label>
+							Username<span class="req">*</span>
+						</label>
+						<input type="text" name="name" required autocomplete="off"/>
+					</div>
 				
-				<div class="field-wrap">
-					<label>
-						Password<span class="req">*</span>
-					</label>
-					<input type="password" name="password" required autocomplete="off"/>
-				</div>
+					<div class="field-wrap">
+						<label>
+							Password<span class="req">*</span>
+						</label>
+						<input type="password" name="password" required autocomplete="off"/>
+					</div>
 				
-				<!-- <p class="forgot"><a href="#">Forgot Password?</a></p> -->
+					<!-- <p class="forgot"><a href="#">Forgot Password?</a></p> -->
 				
-				<button type="submit" class="button button-block"/>Log In</button>
+					<button type="submit" class="button button-block"/>Log In</button>
 				
 				</form>
 
@@ -287,6 +287,21 @@
 					}
 				});
 	        }
+	    }
+
+	    function login(){
+	    	console.log('login');
+	    	$.post("/api/game",{
+            	username: $('#loginform [name="username"]').val(),
+            	email: $('#loginform [name="email"]').val(),
+            	password: $('#loginform [name="password"]').val()
+            },
+             function( data ) {
+				if(data.success){
+					alert('Successfully signed up, please login');
+					window.location.reload();
+				}
+			});
 	    }
 
 		$('.form').find('input, textarea').on('keyup blur focus', function (e) {

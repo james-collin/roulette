@@ -107,7 +107,7 @@ function CWheelAnim(iX,iY){
         _oNumsExtractedText.y = oSprite.height + 100;
 
         _oShowNumber.addChild(_oNumExtractedText);
-        _oShowNumber.addChild(_oNumsExtractedText);
+        // _oShowNumber.addChild(_oNumsExtractedText);
         
         var oSpriteResultBg = s_oSpriteLibrary.getSprite("but_bg");
         var oBgResult = createBitmap(oSpriteResultBg);
