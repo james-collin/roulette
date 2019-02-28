@@ -331,7 +331,7 @@ cron.schedule('*/3 * * * *', () => {
 
 
 
-var csvDump = function(){
+var csvDump = function(res = false){
 	const csvWriter = createCsvWriter({
 	    path: csvFilePath,
 	    // append: true,
@@ -363,6 +363,7 @@ var csvDump = function(){
 		csvWriter.writeRecords(wons)       // returns a promise
 		.then(() => {
 		    console.log('...Done');
+		    if(res)	res.sendFile(path.join(__dirname, csvFilePath));
 		});
 	});
 
@@ -377,8 +378,7 @@ csvDump();
 
 
 apiRoutes.get('/csv', function(req, res) {
-	csvDump();
-	res.sendFile(path.join(__dirname, csvFilePath));
+	csvDump(res);
 })
 
 
