@@ -62,7 +62,9 @@ function CGame(oData){
 		
         
 		
-        _aNumExtractedHistory=new Array();
+        // _aNumExtractedHistory=new Array();
+        _aNumExtractedHistory = EXTRACT_HISTORY;
+        _oInterface.refreshNumExtracted(_aNumExtractedHistory);
 
         _iTimeElaps=0;
         this._onSitDown();
@@ -608,6 +610,7 @@ function CGame(oData){
     s_oGame = this;
     
     TOTAL_MONEY = oData.money;
+    EXTRACT_HISTORY = oData.extract_history;
     MIN_BET = oData.min_bet;
     MAX_BET = oData.max_bet;
     TIME_WAITING_BET = oData.time_bet;

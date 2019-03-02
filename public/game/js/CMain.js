@@ -162,6 +162,7 @@ function CMain(oData){
     };
 	
     this.preloaderReady = function(){
+        console.trace('preloaderReady');
         this._loadImages();
 		
 	if(DISABLE_SOUND_MOBILE === false || s_bMobile === false){
@@ -173,7 +174,8 @@ function CMain(oData){
     
     this.gotoMenu = function(){
         _oMenu = new CMenu();
-        _iState = STATE_MENU;
+        // _iState = STATE_MENU;
+        _iState = STATE_GAME;
     };
     
     this.gotoGame = function(){

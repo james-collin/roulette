@@ -525,6 +525,7 @@ function setMute(szSound, bMute){
 }
 
 function ctlArcadeResume(){
+    console.log(s_oMain);
     if (s_oMain !== null){
         s_oMain.startUpdate();
     }

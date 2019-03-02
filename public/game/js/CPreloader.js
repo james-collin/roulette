@@ -14,6 +14,7 @@ function CPreloader(){
        
        _oContainer = new createjs.Container();
        s_oStage.addChild(_oContainer); 
+       this._onAllImagesLoaded();
     };
     
     this.unload = function(){
@@ -26,7 +27,7 @@ function CPreloader(){
     
     this._onAllImagesLoaded = function(){
         this.attachSprites();
-        
+        console.log('_onAllImagesLoaded');
         s_oMain.preloaderReady();
     };
     

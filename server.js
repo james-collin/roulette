@@ -274,13 +274,19 @@ apiRoutes.post('/game/user', function(req, res) {
 });
 
 apiRoutes.get('/game/user', function(req, res) {
-	console.log('/game/user/game/user/game/user/game/user/game/user');
 	db_utils.findUserByID(req.decoded.id, function(user){
 		if(!user) console.log('No user found');
 		else{
 			console.log('User founddd');
-			console.log({ success: true, credit: user.credit});
-			res.json({ success: true, credit: user.credit});
+			WonStore.find({}).sort({date: -1}).limit(20).exec(function(err, nums) {
+				if(err) throw err;
+				let res_nums = nums.map((num) => {
+					return num['won'];
+				});
+				console.log(res_nums);
+				console.log();
+				res.json({ success: true, credit: user.credit, history: res_nums});
+			})
 		}
 	});
 	console.log(req.body);
@@ -340,6 +346,7 @@ var csvDump = function(res = false){
 	    // append: true,
 	    header: [
 	    	{id: "date", title: "date"},
+	    	{id: "time", title: "time"},
 	        {id: "number", title: "number"},
 			{id: "colour", title: "colour"},
 			{id: "1-18 / 19-36", title: "1-18 / 19-36"},
@@ -354,20 +361,26 @@ var csvDump = function(res = false){
 	    ]
 	});
 
-	WonStore.find({}, function(err, nums) {
+	WonStore.find({}).sort({date: -1}).exec(function(err, nums) {
 		if(err) throw err;
 		// console.log(nums);
 		let wons = nums.map((num) => {
-			let won = winning_num_constants[num['won']];
-			won['date'] = num['date'];
+			let won = winning_num_constants[num['won']],
+				date = num['date'];
+			// console.log();
+			won['date'] = date.getDate() + '-' + date.getMonth() + '-' + date.getFullYear();
+			won['time'] = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();			
 			return won;
 		});
-		console.log(wons);
+		// console.log(wons);
 		csvWriter.writeRecords(wons)       // returns a promise
 		.then(() => {
 		    console.log('...Done');
 		    if(res)	res.sendFile(path.join(__dirname, csvFilePath));
-		});
+		})
+		.catch((err) => {
+			console.log(err);
+		})
 	});
 
 

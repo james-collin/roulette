@@ -115,7 +115,7 @@
                                     <li data-action="see"><a href="#">See</a></li>
                                     <li data-action="play"><a href="#">Play</a></li>
                                     <li data-action="download"><a href="#">Download</a></li>
-                                    <li data-action="info"><a href="#">Info</a></li>
+                                    <li data-action="info"><a href="#">Info for Investors</a></li>
                                     <li data-action="contacts"><a href="#">Contacts</a></li>
                                 </ul>
                             </div>
@@ -154,11 +154,28 @@
 
     <div style="display: none;text-align: center;" data-page="download">
         <h1>Download</h1>
+        <section class="jumbotron" style="">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md  content-wrapper">
+                        <h1 class="jumbotron-title display-1">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, numquam</p>
+                        </h1>
+                        <h5 class="jumbotron-subtitle">
+                            itiis praesentium ab harum obcaecati asperiores, animi voluptates omnis odit repudiandae fuga laboriosam repellendus delectus dolore neque modi adipisci alias totam reprehenderit qui laudantium iusto! Atque, culpa ipsam quaerat voluptates nesciunt, laborum illum praesentium voluptatibus, nam consectetur esse. Minus sed aliquid tempora impedit.</p>
+                        </h5>
+
+                    </div>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <div class="jumbotron-overlay"></div>
+        </section>
         <button class="btn btn-primary" style="margin-top: 20px;" onClick="downloadcsv()">Download excel file</button>
     </div>
 
     <div style="display: none;" data-page="info">
-        <h1>Info</h1>
+        <h1>Info for Investors</h1>
     </div>
 
     <div style="display: none;" data-page="contacts">
@@ -211,7 +228,7 @@
                 // });
             }
 
-            var initializeGame = function(credit){
+            var initializeGame = function(credit,extractHistory){
                 $(document).ready(function(){
 
 
@@ -245,7 +262,9 @@
                                                 fullscreen:true, //SET THIS TO FALSE IF YOU DON'T WANT TO SHOW FULLSCREEN BUTTON
                                                 check_orientation:true,     //SET TO FALSE IF YOU DON'T WANT TO SHOW ORIENTATION ALERT 
                                                 show_credits:true,                     //ENABLE/DISABLE CREDITS BUTTON IN THE MAIN SCREEN
-                                                num_hand_before_ads:10                 //NUMBER OF HANDS PLAYED BEFORE AD SHOWN
+                                                num_hand_before_ads:10,
+                                                extract_history: extractHistory
+                                                //NUMBER OF HANDS PLAYED BEFORE AD SHOWN
                                                 //
                                                 //// THIS FUNCTIONALITY IS ACTIVATED ONLY WITH CTL ARCADE PLUGIN.///////////////////////////
                                                 /////////////////// YOU CAN GET IT AT: /////////////////////////////////////////////////////////
@@ -315,8 +334,7 @@
                     'x-access-token': getCookie('token')
                 }
             }).done(function(res) {
-                console.log(res);
-                if(res.success) initializeGame((res.credit) ? res.credit : 1000);
+               if(res.success) initializeGame((res.credit) ? res.credit : 1000, res.history);
             }).fail(function(err){
                 console.log(err);
             });

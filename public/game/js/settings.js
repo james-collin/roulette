@@ -37,6 +37,7 @@ var COLOR_BLACK = "black";
 var COLOR_ZERO  = "zero";
 
 var TOTAL_MONEY;
+var EXTRACT_HISTORY;
 var NUM_FICHE_VALUES = 6;
 var NUMBERS_TO_BET =37;
 var NUM_FICHES = 6;

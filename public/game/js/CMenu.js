@@ -69,9 +69,9 @@ function CMenu(){
         
         this.refreshButtonPos(s_iOffsetX, s_iOffsetY);
         
-        // this.unload();
-        // s_oMain.gotoGame();
-        // $(s_oMain).trigger("start_session");
+        this.unload();
+        s_oMain.gotoGame();
+        $(s_oMain).trigger("start_session");
         // this._onButPlayRelease();
         // this._onButPlayRelease.call(this);
     };

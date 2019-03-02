@@ -1,14 +1,14 @@
 {
   "0": {
     "number": "0",
-    "colour": " ",
-    "1-18 / 19-36": "neighbours of zero",
-    "odd / even": " zero game",
-    "dozen": "3",
-    "column": "26",
-    "three": "32",
-    "six": "15",
-    "corners": "a",
+    "colour": "",
+    "1-18 / 19-36": "",
+    "odd / even": "",
+    "dozen": "",
+    "column": "",
+    "three": "M,N",
+    "six": "",
+    "corners": "",
     "call": "neighbours of zero, zero game",
     "neighbours": "3-26-32-15"
   },

@@ -450,6 +450,7 @@ function CWheelAnim(iX,iY){
     };
     
     this.update = function(){
+        console.trace('update');
         if(_bUpdate === false){
             return;
         }
