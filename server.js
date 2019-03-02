@@ -288,9 +288,9 @@ apiRoutes.get('/game/user', function(req, res) {
 
 
 var pusher = new Pusher({
-  appId: '719110',
-  key: 'c87fecd8c556efdec0be',
-  secret: '6a84929ea6e8ad492816',
+  appId: '716380',
+  key: '65d21800c7e4ac69744e',
+  secret: '98a552c593d60f5254c6',
   cluster: 'ap2',
   encrypted: true
 });
@@ -303,7 +303,7 @@ function getRandomInt(min, max) {
 }
 
 var cron = require('node-cron');
-cron.schedule('*/3 * * * *', () => {
+cron.schedule('* * * * *', () => {
 	console.log('sending');
 	var random_nums = [];
 	for(var i=0;i<3;i++){

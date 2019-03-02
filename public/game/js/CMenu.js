@@ -42,8 +42,6 @@ function CMenu(){
             _pStartPosFullscreen = {x: (oSprite.width/4) + 10, y: (oSprite.height/2) + 10}; 
         }
         // this._onButPlayRelease();
-        s_oMain.gotoGame();
-        $(s_oMain).trigger("start_session");
         
         var doc = window.document;
         var docEl = doc.documentElement;
@@ -66,9 +64,16 @@ function CMenu(){
         
         s_oStage.addChild(_oFade);
         
-        createjs.Tween.get(_oFade).to({alpha:0}, 400).call(function(){_oFade.visible = false;});  
+        // createjs.Tween.get(_oFade).to({alpha:0}, 400).call(function(){_oFade.visible = false;});
+        createjs.Tween.get(_oFade).to({alpha:0}, 400).call(function(){});
         
         this.refreshButtonPos(s_iOffsetX, s_iOffsetY);
+        
+        // this.unload();
+        // s_oMain.gotoGame();
+        // $(s_oMain).trigger("start_session");
+        // this._onButPlayRelease();
+        // this._onButPlayRelease.call(this);
     };
     
     this.refreshButtonPos = function (iNewX, iNewY) {
@@ -111,7 +116,6 @@ function CMenu(){
     };
     
     this._onButPlayRelease = function(){
-        console.log(this);
         this.unload();
         s_oMain.gotoGame();
         
