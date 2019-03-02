@@ -112,7 +112,7 @@
                             <div class="navbar-collapse collapse sidebar-navbar-collapse">
                                 <ul class="nav navbar-nav" id="nav-buttons">
                                     <li data-action="aboutus" class="active"><a href="#">About us</a></li>
-                                    <!-- <li data-action="see"><a href="#">See</a></li> -->
+                                    <li data-action="see"><a href="#">See</a></li>
                                     <li data-action="play"><a href="#">Play</a></li>
                                     <li data-action="download"><a href="#">Download</a></li>
                                     <li data-action="info"><a href="#">Info</a></li>
@@ -148,9 +148,13 @@
         </section>
     </div>
 
+    <div style="display: none;text-align: center;" data-page="see">
+        <h1>See</h1>
+        <button class="btn btn-primary" style="margin-top: 20px;" onClick="downloadcsv()">Download excel file</button>
+    </div>
+
     <div style="display: none;text-align: center;" data-page="download">
         <h1>Download</h1>
-        <button class="btn btn-primary" style="margin-top: 20px;" onClick="downloadcsv()">Download excel file</button>
     </div>
 
     <div style="display: none;" data-page="info">

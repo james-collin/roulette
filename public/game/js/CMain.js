@@ -139,6 +139,7 @@ function CMain(oData){
     };
     
     this._onImagesLoaded = function(){
+        console.log('_onImagesLoaded');
         _iCurResource++;
 
         var iPerc = Math.floor(_iCurResource/RESOURCE_TO_LOAD *100);

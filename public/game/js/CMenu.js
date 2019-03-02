@@ -27,6 +27,7 @@ function CMenu(){
             _pStartPosAudio = {x: CANVAS_WIDTH - (oSprite.width/4)- 10, y: (oSprite.height/2) + 10}; 
             _oAudioToggle = new CToggle(_pStartPosAudio.x,_pStartPosAudio.y,oSprite,s_bAudioActive,s_oStage);
             _oAudioToggle.addEventListener(ON_MOUSE_UP, this._onAudioToggle, this);
+            console.log(_oAudioToggle);
         }
         
         var oSpriteFullscreen = s_oSpriteLibrary.getSprite('but_fullscreen');
@@ -40,6 +41,9 @@ function CMenu(){
         }else{
             _pStartPosFullscreen = {x: (oSprite.width/4) + 10, y: (oSprite.height/2) + 10}; 
         }
+        // this._onButPlayRelease();
+        s_oMain.gotoGame();
+        $(s_oMain).trigger("start_session");
         
         var doc = window.document;
         var docEl = doc.documentElement;
@@ -68,6 +72,7 @@ function CMenu(){
     };
     
     this.refreshButtonPos = function (iNewX, iNewY) {
+        console.log(_oAudioToggle);
         if (DISABLE_SOUND_MOBILE === false || s_bMobile === false) {
             _oAudioToggle.setPosition(_pStartPosAudio.x - iNewX, iNewY + _pStartPosAudio.y);
         }
@@ -106,6 +111,7 @@ function CMenu(){
     };
     
     this._onButPlayRelease = function(){
+        console.log(this);
         this.unload();
         s_oMain.gotoGame();
         
