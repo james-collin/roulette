@@ -1,4 +1,8 @@
 date,time,number,colour,1-18 / 19-36,odd / even,dozen,column,three,six,corners,call,neighbours
+2-2-2019,20:3:0,24,B,SH,even,second,three,H,19-24,n-p,thirds of the wheel,10-5-16-33
+2-2-2019,20:1:0,17,B,FH,odd,second,two,F,13-18,i-j-k-l,the orphans,2-25-34-6
+2-2-2019,20:1:0,17,B,FH,odd,second,two,F,13-18,i-j-k-l,the orphans,2-25-34-6
+2-2-2019,20:43:0,2,B,FH,even,first,two,A,1-6,a-b,neighbours of zero,4-21-25-17
 2-2-2019,19:57:0,27,R,SH,odd,third,three,I,25-30,p-r,thirds of the wheel,34-6-13-36
 2-2-2019,20:5:0,6,B,FH,even,first,three,B,1-6,b-d,the orphans,17-34-27-13
 2-2-2019,21:4:0,34,R,SH,even,third,one ,L,31-36,u,the orphans,25-17-6-27
