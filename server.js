@@ -14,7 +14,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser')
 var db_utils = require('./app/utils/db.js')
 var csvFilePath = './static/csv/file.csv';
-var xlsFilePath = './static/csv/file.xlsx';
+var xlsFilePath = './static/csv/wins.xlsx';
 var winning_num_constants = require('./app/constants/constants.json')
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 var Excel = require('exceljs');
@@ -388,7 +388,8 @@ apiRoutes.get('/csv', function(req, res) {
 	    // use workbook or worksheet
 	    workbook.xlsx.writeFile(xlsFilePath)
 	    .then(function() {
-	        console.log('DONE')
+	        console.log('DONE');
+	        res.sendFile(path.join(__dirname, xlsFilePath));
 	    });
 	});
 

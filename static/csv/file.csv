@@ -1,65 +1,89 @@
 date,number,colour,1-18 / 19-36,odd / even,dozen,column,three,six,corners,call,neighbours
 Sat Mar 02 2019 17:21:00 GMT+0530 (India Standard Time),30,R,SH,even,third,three,G,25-30,r-t,thirds of the wheel,36-11-8-23
-Fri Mar 01 2019 01:30:00 GMT+0530 (India Standard Time),32,R,SH,even,third,two,K,31-36,s-t-u-v,"neighbours of zero, zero game",26-0-15-19
-Fri Mar 01 2019 01:18:00 GMT+0530 (India Standard Time),21,R,SH,odd,second,three,G,19-24,l-n,neighbours of zero,19-4-2-25
+Sat Mar 02 2019 18:01:00 GMT+0530 (India Standard Time),32,R,SH,even,third,two,K,31-36,s-t-u-v,"neighbours of zero, zero game",26-0-15-19
+Sat Mar 02 2019 18:03:00 GMT+0530 (India Standard Time),21,R,SH,odd,second,three,G,19-24,l-n,neighbours of zero,19-4-2-25
 Sat Mar 02 2019 16:39:00 GMT+0530 (India Standard Time),26,B,SH,even,third,two,I,25-30,o-p-q-s,"neighbours of zero, zero game",35-3-0-32
-Fri Mar 01 2019 01:24:00 GMT+0530 (India Standard Time),27,R,SH,odd,third,three,I,25-30,p-r,thirds of the wheel,34-6-13-36
-Sat Mar 02 2019 17:06:00 GMT+0530 (India Standard Time),13,B,FH,odd,second,one ,E,13-18,g-i,thirds of the wheel,6-27-36-11
-Fri Mar 01 2019 01:30:00 GMT+0530 (India Standard Time),32,R,SH,even,third,two,K,31-36,s-t-u-v,"neighbours of zero, zero game",26-0-15-19
-Sat Mar 02 2019 17:36:00 GMT+0530 (India Standard Time),22,B,SH,even,second,one ,H,19-24,m-o,neighbours of zero,31-9-18-29
-Sat Mar 02 2019 16:36:00 GMT+0530 (India Standard Time),4,B,FH,even,first,one ,B,1-6,a-c,neighbours of zero,15-19-21-2
+Sat Mar 02 2019 18:07:00 GMT+0530 (India Standard Time),27,R,SH,odd,third,three,I,25-30,p-r,thirds of the wheel,34-6-13-36
+Sat Mar 02 2019 18:04:00 GMT+0530 (India Standard Time),13,B,FH,odd,second,one ,E,13-18,g-i,thirds of the wheel,6-27-36-11
+Sat Mar 02 2019 18:01:00 GMT+0530 (India Standard Time),32,R,SH,even,third,two,K,31-36,s-t-u-v,"neighbours of zero, zero game",26-0-15-19
+Sat Mar 02 2019 18:02:00 GMT+0530 (India Standard Time),22,B,SH,even,second,one ,H,19-24,m-o,neighbours of zero,31-9-18-29
+Sat Mar 02 2019 17:50:00 GMT+0530 (India Standard Time),4,B,FH,even,first,one ,B,1-6,a-c,neighbours of zero,15-19-21-2
 Fri Mar 01 2019 01:42:00 GMT+0530 (India Standard Time),5,R,FH,odd,first,two,B,1-6,a-b-c-d,thirds of the wheel,23-10-24-16
-Fri Mar 01 2019 01:48:00 GMT+0530 (India Standard Time),19,R,SH,odd,second,one ,G,19-24,k-m,neighbours of zero,32-15-4-21
-Sat Mar 02 2019 17:48:00 GMT+0530 (India Standard Time),18,R,FH,even,second,three,F,13-18,j-l,neighbours of zero,9-22-29-7
-Fri Mar 01 2019 01:54:00 GMT+0530 (India Standard Time),25,R,SH,odd,third,one ,I,25-30,o-q,neighbours of zero,21-2-17-34
+Sat Mar 02 2019 18:13:00 GMT+0530 (India Standard Time),19,R,SH,odd,second,one ,G,19-24,k-m,neighbours of zero,32-15-4-21
+Sat Mar 02 2019 17:51:00 GMT+0530 (India Standard Time),18,R,FH,even,second,three,F,13-18,j-l,neighbours of zero,9-22-29-7
+Sat Mar 02 2019 18:11:00 GMT+0530 (India Standard Time),25,R,SH,odd,third,one ,I,25-30,o-q,neighbours of zero,21-2-17-34
 Sat Mar 02 2019 02:27:00 GMT+0530 (India Standard Time),34,R,SH,even,third,one ,L,31-36,u,the orphans,25-17-6-27
 Sat Mar 02 2019 17:45:00 GMT+0530 (India Standard Time),31,B,SH,odd,third,one ,K,31-36,s-u, ,20-14-9-22
 Sat Mar 02 2019 02:27:00 GMT+0530 (India Standard Time),34,R,SH,even,third,one ,L,31-36,u,the orphans,25-17-6-27
-Sat Mar 02 2019 16:36:00 GMT+0530 (India Standard Time),4,B,FH,even,first,one ,B,1-6,a-c,neighbours of zero,15-19-21-2
+Sat Mar 02 2019 17:50:00 GMT+0530 (India Standard Time),4,B,FH,even,first,one ,B,1-6,a-c,neighbours of zero,15-19-21-2
 Sat Mar 02 2019 16:03:00 GMT+0530 (India Standard Time),28,B,SH,even,third,one ,G,25-30,q-s,neighbours of zero,29-7-12-35
 Sat Mar 02 2019 16:06:00 GMT+0530 (India Standard Time),29,B,SH,odd,third,two,G,25-30,q-r-s-t,neighbours of zero,22-18-7-28
-Sat Mar 02 2019 17:18:00 GMT+0530 (India Standard Time),9,R,FH,odd,first,three,C,7-12,d-f,the orphans,14-31-22-18
-Sat Mar 02 2019 17:18:00 GMT+0530 (India Standard Time),9,R,FH,odd,first,three,C,7-12,d-f,the orphans,14-31-22-18
+Sat Mar 02 2019 17:54:00 GMT+0530 (India Standard Time),9,R,FH,odd,first,three,C,7-12,d-f,the orphans,14-31-22-18
+Sat Mar 02 2019 17:54:00 GMT+0530 (India Standard Time),9,R,FH,odd,first,three,C,7-12,d-f,the orphans,14-31-22-18
 Sat Mar 02 2019 16:03:00 GMT+0530 (India Standard Time),28,B,SH,even,third,one ,G,25-30,q-s,neighbours of zero,29-7-12-35
 Sat Mar 02 2019 16:06:00 GMT+0530 (India Standard Time),29,B,SH,odd,third,two,G,25-30,q-r-s-t,neighbours of zero,22-18-7-28
-Sat Mar 02 2019 15:42:00 GMT+0530 (India Standard Time),8,B,FH,even,first,two,C,7-12,c-d-e-f,thirds of the wheel,11-30-23-10
-Sat Mar 02 2019 15:42:00 GMT+0530 (India Standard Time),8,B,FH,even,first,two,C,7-12,c-d-e-f,thirds of the wheel,11-30-23-10
+Sat Mar 02 2019 18:12:00 GMT+0530 (India Standard Time),8,B,FH,even,first,two,C,7-12,c-d-e-f,thirds of the wheel,11-30-23-10
+Sat Mar 02 2019 18:12:00 GMT+0530 (India Standard Time),8,B,FH,even,first,two,C,7-12,c-d-e-f,thirds of the wheel,11-30-23-10
 Sat Mar 02 2019 17:24:00 GMT+0530 (India Standard Time),17,B,FH,odd,second,two,F,13-18,i-j-k-l,the orphans,2-25-34-6
 Sat Mar 02 2019 15:48:00 GMT+0530 (India Standard Time),1,R,FH,odd,first,one ,A,1-6,a,the orphans,16-33-20-14
 Sat Mar 02 2019 17:00:00 GMT+0530 (India Standard Time),3,R,FH,odd,first,three,A,1-6,b,"neighbours of zero, zero game",12-35-26-0
-Sat Mar 02 2019 16:00:00 GMT+0530 (India Standard Time),20,B,SH,even,second,two,G,19-24,k-l-m-n,the orphans,33-1-14-31
+Sat Mar 02 2019 17:56:00 GMT+0530 (India Standard Time),20,B,SH,even,second,two,G,19-24,k-l-m-n,the orphans,33-1-14-31
 Sat Mar 02 2019 16:03:00 GMT+0530 (India Standard Time),28,B,SH,even,third,one ,G,25-30,q-s,neighbours of zero,29-7-12-35
 Sat Mar 02 2019 16:06:00 GMT+0530 (India Standard Time),29,B,SH,odd,third,two,G,25-30,q-r-s-t,neighbours of zero,22-18-7-28
-Sat Mar 02 2019 17:36:00 GMT+0530 (India Standard Time),22,B,SH,even,second,one ,H,19-24,m-o,neighbours of zero,31-9-18-29
-Sat Mar 02 2019 16:12:00 GMT+0530 (India Standard Time),23,R,SH,odd,second,two,H,19-24,m-n-o-p,thirds of the wheel,30-8-10-5
+Sat Mar 02 2019 18:02:00 GMT+0530 (India Standard Time),22,B,SH,even,second,one ,H,19-24,m-o,neighbours of zero,31-9-18-29
+Sat Mar 02 2019 17:57:00 GMT+0530 (India Standard Time),23,R,SH,odd,second,two,H,19-24,m-n-o-p,thirds of the wheel,30-8-10-5
 Sat Mar 02 2019 16:33:00 GMT+0530 (India Standard Time),7,R,FH,odd,first,one ,C,7-12,c-e,neighbours of zero,18-29-28-19
 Sat Mar 02 2019 17:45:00 GMT+0530 (India Standard Time),31,B,SH,odd,third,one ,K,31-36,s-u, ,20-14-9-22
 Sat Mar 02 2019 17:45:00 GMT+0530 (India Standard Time),31,B,SH,odd,third,one ,K,31-36,s-u, ,20-14-9-22
 Sat Mar 02 2019 17:00:00 GMT+0530 (India Standard Time),3,R,FH,odd,first,three,A,1-6,b,"neighbours of zero, zero game",12-35-26-0
-Sat Mar 02 2019 17:48:00 GMT+0530 (India Standard Time),18,R,FH,even,second,three,F,13-18,j-l,neighbours of zero,9-22-29-7
-Sat Mar 02 2019 16:30:00 GMT+0530 (India Standard Time),35,B,SH,odd,third,two,L,31-36,u-v,"neighbours of zero, zero game",28-12-3-26
+Sat Mar 02 2019 17:51:00 GMT+0530 (India Standard Time),18,R,FH,even,second,three,F,13-18,j-l,neighbours of zero,9-22-29-7
+Sat Mar 02 2019 18:00:00 GMT+0530 (India Standard Time),35,B,SH,odd,third,two,L,31-36,u-v,"neighbours of zero, zero game",28-12-3-26
 Sat Mar 02 2019 16:33:00 GMT+0530 (India Standard Time),7,R,FH,odd,first,one ,C,7-12,c-e,neighbours of zero,18-29-28-19
-Sat Mar 02 2019 16:36:00 GMT+0530 (India Standard Time),4,B,FH,even,first,one ,B,1-6,a-c,neighbours of zero,15-19-21-2
+Sat Mar 02 2019 17:50:00 GMT+0530 (India Standard Time),4,B,FH,even,first,one ,B,1-6,a-c,neighbours of zero,15-19-21-2
 Sat Mar 02 2019 16:39:00 GMT+0530 (India Standard Time),26,B,SH,even,third,two,I,25-30,o-p-q-s,"neighbours of zero, zero game",35-3-0-32
 Sat Mar 02 2019 17:21:00 GMT+0530 (India Standard Time),30,R,SH,even,third,three,G,25-30,r-t,thirds of the wheel,36-11-8-23
 Sat Mar 02 2019 17:21:00 GMT+0530 (India Standard Time),30,R,SH,even,third,three,G,25-30,r-t,thirds of the wheel,36-11-8-23
-Sat Mar 02 2019 17:06:00 GMT+0530 (India Standard Time),13,B,FH,odd,second,one ,E,13-18,g-i,thirds of the wheel,6-27-36-11
+Sat Mar 02 2019 18:04:00 GMT+0530 (India Standard Time),13,B,FH,odd,second,one ,E,13-18,g-i,thirds of the wheel,6-27-36-11
 Sat Mar 02 2019 16:51:00 GMT+0530 (India Standard Time),0, ,neighbours of zero, zero game,3,26,32,15,a,"neighbours of zero, zero game",3-26-32-15
-Sat Mar 02 2019 17:36:00 GMT+0530 (India Standard Time),22,B,SH,even,second,one ,H,19-24,m-o,neighbours of zero,31-9-18-29
-Sat Mar 02 2019 17:48:00 GMT+0530 (India Standard Time),18,R,FH,even,second,three,F,13-18,j-l,neighbours of zero,9-22-29-7
+Sat Mar 02 2019 18:02:00 GMT+0530 (India Standard Time),22,B,SH,even,second,one ,H,19-24,m-o,neighbours of zero,31-9-18-29
+Sat Mar 02 2019 17:51:00 GMT+0530 (India Standard Time),18,R,FH,even,second,three,F,13-18,j-l,neighbours of zero,9-22-29-7
 Sat Mar 02 2019 17:00:00 GMT+0530 (India Standard Time),3,R,FH,odd,first,three,A,1-6,b,"neighbours of zero, zero game",12-35-26-0
-Sat Mar 02 2019 17:15:00 GMT+0530 (India Standard Time),12,R,FH,even,first,three,D,7-12,f-h,"neighbours of zero, zero game",7-28-35-3
-Sat Mar 02 2019 17:06:00 GMT+0530 (India Standard Time),13,B,FH,odd,second,one ,E,13-18,g-i,thirds of the wheel,6-27-36-11
-Sat Mar 02 2019 17:09:00 GMT+0530 (India Standard Time),16,R,FH,even,second,one ,F,13-18,I-k,thirds of the wheel,5-24-33-1
+Sat Mar 02 2019 18:06:00 GMT+0530 (India Standard Time),12,R,FH,even,first,three,D,7-12,f-h,"neighbours of zero, zero game",7-28-35-3
+Sat Mar 02 2019 18:04:00 GMT+0530 (India Standard Time),13,B,FH,odd,second,one ,E,13-18,g-i,thirds of the wheel,6-27-36-11
+Sat Mar 02 2019 17:53:00 GMT+0530 (India Standard Time),16,R,FH,even,second,one ,F,13-18,I-k,thirds of the wheel,5-24-33-1
 Sat Mar 02 2019 17:24:00 GMT+0530 (India Standard Time),17,B,FH,odd,second,two,F,13-18,i-j-k-l,the orphans,2-25-34-6
-Sat Mar 02 2019 17:15:00 GMT+0530 (India Standard Time),12,R,FH,even,first,three,D,7-12,f-h,"neighbours of zero, zero game",7-28-35-3
-Sat Mar 02 2019 17:18:00 GMT+0530 (India Standard Time),9,R,FH,odd,first,three,C,7-12,d-f,the orphans,14-31-22-18
+Sat Mar 02 2019 18:06:00 GMT+0530 (India Standard Time),12,R,FH,even,first,three,D,7-12,f-h,"neighbours of zero, zero game",7-28-35-3
+Sat Mar 02 2019 17:54:00 GMT+0530 (India Standard Time),9,R,FH,odd,first,three,C,7-12,d-f,the orphans,14-31-22-18
 Sat Mar 02 2019 17:21:00 GMT+0530 (India Standard Time),30,R,SH,even,third,three,G,25-30,r-t,thirds of the wheel,36-11-8-23
 Sat Mar 02 2019 17:24:00 GMT+0530 (India Standard Time),17,B,FH,odd,second,two,F,13-18,i-j-k-l,the orphans,2-25-34-6
 Sat Mar 02 2019 17:45:00 GMT+0530 (India Standard Time),31,B,SH,odd,third,one ,K,31-36,s-u, ,20-14-9-22
 Sat Mar 02 2019 17:30:00 GMT+0530 (India Standard Time),15,B,FH,odd,second,three,E,13-18,h-j,"neighbours of zero, zero game",0-32-19-4
-Sat Mar 02 2019 17:48:00 GMT+0530 (India Standard Time),18,R,FH,even,second,three,F,13-18,j-l,neighbours of zero,9-22-29-7
-Sat Mar 02 2019 17:36:00 GMT+0530 (India Standard Time),22,B,SH,even,second,one ,H,19-24,m-o,neighbours of zero,31-9-18-29
+Sat Mar 02 2019 17:51:00 GMT+0530 (India Standard Time),18,R,FH,even,second,three,F,13-18,j-l,neighbours of zero,9-22-29-7
+Sat Mar 02 2019 18:02:00 GMT+0530 (India Standard Time),22,B,SH,even,second,one ,H,19-24,m-o,neighbours of zero,31-9-18-29
 Sat Mar 02 2019 17:39:00 GMT+0530 (India Standard Time),14,R,FH,even,second,two,E,13-18,g-h-i-j,the orphans,1-20-31-9
 Sat Mar 02 2019 17:45:00 GMT+0530 (India Standard Time),31,B,SH,odd,third,one ,K,31-36,s-u, ,20-14-9-22
-Sat Mar 02 2019 17:48:00 GMT+0530 (India Standard Time),18,R,FH,even,second,three,F,13-18,j-l,neighbours of zero,9-22-29-7
+Sat Mar 02 2019 17:51:00 GMT+0530 (India Standard Time),18,R,FH,even,second,three,F,13-18,j-l,neighbours of zero,9-22-29-7
+Sat Mar 02 2019 17:50:00 GMT+0530 (India Standard Time),4,B,FH,even,first,one ,B,1-6,a-c,neighbours of zero,15-19-21-2
+Sat Mar 02 2019 17:51:00 GMT+0530 (India Standard Time),18,R,FH,even,second,three,F,13-18,j-l,neighbours of zero,9-22-29-7
+Sat Mar 02 2019 18:06:00 GMT+0530 (India Standard Time),12,R,FH,even,first,three,D,7-12,f-h,"neighbours of zero, zero game",7-28-35-3
+Sat Mar 02 2019 17:53:00 GMT+0530 (India Standard Time),16,R,FH,even,second,one ,F,13-18,I-k,thirds of the wheel,5-24-33-1
+Sat Mar 02 2019 17:54:00 GMT+0530 (India Standard Time),9,R,FH,odd,first,three,C,7-12,d-f,the orphans,14-31-22-18
+Sat Mar 02 2019 18:08:00 GMT+0530 (India Standard Time),24,B,SH,even,second,three,H,19-24,n-p,thirds of the wheel,10-5-16-33
+Sat Mar 02 2019 17:56:00 GMT+0530 (India Standard Time),20,B,SH,even,second,two,G,19-24,k-l-m-n,the orphans,33-1-14-31
+Sat Mar 02 2019 17:57:00 GMT+0530 (India Standard Time),23,R,SH,odd,second,two,H,19-24,m-n-o-p,thirds of the wheel,30-8-10-5
+Sat Mar 02 2019 18:02:00 GMT+0530 (India Standard Time),22,B,SH,even,second,one ,H,19-24,m-o,neighbours of zero,31-9-18-29
+Sat Mar 02 2019 18:13:00 GMT+0530 (India Standard Time),19,R,SH,odd,second,one ,G,19-24,k-m,neighbours of zero,32-15-4-21
+Sat Mar 02 2019 18:00:00 GMT+0530 (India Standard Time),35,B,SH,odd,third,two,L,31-36,u-v,"neighbours of zero, zero game",28-12-3-26
+Sat Mar 02 2019 18:01:00 GMT+0530 (India Standard Time),32,R,SH,even,third,two,K,31-36,s-t-u-v,"neighbours of zero, zero game",26-0-15-19
+Sat Mar 02 2019 18:02:00 GMT+0530 (India Standard Time),22,B,SH,even,second,one ,H,19-24,m-o,neighbours of zero,31-9-18-29
+Sat Mar 02 2019 18:03:00 GMT+0530 (India Standard Time),21,R,SH,odd,second,three,G,19-24,l-n,neighbours of zero,19-4-2-25
+Sat Mar 02 2019 18:04:00 GMT+0530 (India Standard Time),13,B,FH,odd,second,one ,E,13-18,g-i,thirds of the wheel,6-27-36-11
+Sat Mar 02 2019 18:05:00 GMT+0530 (India Standard Time),10,B,FH,even,first,one ,D,7-12,e-g,thirds of the wheel,8-23-5-24
+Sat Mar 02 2019 18:06:00 GMT+0530 (India Standard Time),12,R,FH,even,first,three,D,7-12,f-h,"neighbours of zero, zero game",7-28-35-3
+Sat Mar 02 2019 18:07:00 GMT+0530 (India Standard Time),27,R,SH,odd,third,three,I,25-30,p-r,thirds of the wheel,34-6-13-36
+Sat Mar 02 2019 18:08:00 GMT+0530 (India Standard Time),24,B,SH,even,second,three,H,19-24,n-p,thirds of the wheel,10-5-16-33
+Sat Mar 02 2019 18:09:00 GMT+0530 (India Standard Time),6,B,FH,even,first,three,B,1-6,b-d,the orphans,17-34-27-13
+Sat Mar 02 2019 18:12:00 GMT+0530 (India Standard Time),8,B,FH,even,first,two,C,7-12,c-d-e-f,thirds of the wheel,11-30-23-10
+Sat Mar 02 2019 18:11:00 GMT+0530 (India Standard Time),25,R,SH,odd,third,one ,I,25-30,o-q,neighbours of zero,21-2-17-34
+Sat Mar 02 2019 18:12:00 GMT+0530 (India Standard Time),8,B,FH,even,first,two,C,7-12,c-d-e-f,thirds of the wheel,11-30-23-10
+Sat Mar 02 2019 18:13:00 GMT+0530 (India Standard Time),19,R,SH,odd,second,one ,G,19-24,k-m,neighbours of zero,32-15-4-21
