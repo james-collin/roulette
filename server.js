@@ -18,6 +18,7 @@ var xlsFilePath = './static/csv/wins.xlsx';
 var winning_num_constants = require('./app/constants/constants.json')
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 var Excel = require('exceljs');
+require('dotenv').config();
 
 
 
@@ -292,11 +293,13 @@ apiRoutes.get('/game/user', function(req, res) {
 	console.log(req.body);
 });
 
-
+console.log(process.env.pusher_app_id);
+console.log(process.env.pusher_key);
+console.log(process.env.pusher_secret);
 var pusher = new Pusher({
-  appId: '716380',
-  key: '65d21800c7e4ac69744e',
-  secret: '98a552c593d60f5254c6',
+  appId: process.env.pusher_app_id,
+  key: process.env.pusher_key,
+  secret: process.env.pusher_secret,
   cluster: 'ap2',
   encrypted: true
 });
