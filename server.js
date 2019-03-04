@@ -311,15 +311,14 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-var cron = require('node-cron');
-cron.schedule('* * * * *', () => {
+function generateRandNum(){
 	console.log('sending');
 	var random_nums = [];
 	for(var i=0;i<3;i++){
 		random_nums.push(getRandomInt(0,36));
 	}
 	var final_num = random_nums[getRandomInt(0,2)];
-	
+
 	var won_num = new WonStore({ 
 		won: final_num 
 	});
@@ -339,6 +338,12 @@ cron.schedule('* * * * *', () => {
 	  "numbers": random_nums,
 	  "number": final_num,
 	});
+}
+// generateRandNum();
+
+var cron = require('node-cron');
+cron.schedule('* * * * *', () => {
+	generateRandNum();
 });
 
 
@@ -366,19 +371,23 @@ var csvDump = function(res = false){
 
 	WonStore.find({}).sort({date: -1}).exec(function(err, nums) {
 		if(err) throw err;
-		// console.log(nums);
-		let wons = nums.map((num) => {
-			let won = winning_num_constants[num['won']],
+
+		let orderedNums = nums.sort((a,b) => {
+			return b['date'].getTime() - a['date'].getTime();
+		});
+
+		let wons = orderedNums.map((num) => {
+			let won = JSON.parse(JSON.stringify(winning_num_constants[num['won']])),
 				date = num['date'];
-			// console.log();
+			// console.log(typeof(new Date(num['date'])));
 			won['date'] = date.getDate() + '-' + date.getMonth() + '-' + date.getFullYear();
-			won['time'] = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();			
+			won['time'] = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
 			return won;
 		});
-		// console.log(wons);
+
 		csvWriter.writeRecords(wons)       // returns a promise
 		.then(() => {
-		    console.log('...Done');
+		    // console.log('...Done');
 		    if(res)	res.sendFile(path.join(__dirname, csvFilePath));
 		})
 		.catch((err) => {

@@ -1,120 +1,80 @@
 date,time,number,colour,1-18 / 19-36,odd / even,dozen,column,three,six,corners,call,neighbours
-2-2-2019,20:3:0,24,B,SH,even,second,three,H,19-24,n-p,thirds of the wheel,10-5-16-33
-2-2-2019,20:1:0,17,B,FH,odd,second,two,F,13-18,i-j-k-l,the orphans,2-25-34-6
-2-2-2019,20:1:0,17,B,FH,odd,second,two,F,13-18,i-j-k-l,the orphans,2-25-34-6
-2-2-2019,20:43:0,2,B,FH,even,first,two,A,1-6,a-b,neighbours of zero,4-21-25-17
-2-2-2019,19:57:0,27,R,SH,odd,third,three,I,25-30,p-r,thirds of the wheel,34-6-13-36
-2-2-2019,20:5:0,6,B,FH,even,first,three,B,1-6,b-d,the orphans,17-34-27-13
-2-2-2019,21:4:0,34,R,SH,even,third,one ,L,31-36,u,the orphans,25-17-6-27
-2-2-2019,21:4:0,34,R,SH,even,third,one ,L,31-36,u,the orphans,25-17-6-27
-2-2-2019,20:5:0,6,B,FH,even,first,three,B,1-6,b-d,the orphans,17-34-27-13
-2-2-2019,20:4:0,10,B,FH,even,first,one ,D,7-12,e-g,thirds of the wheel,8-23-5-24
-2-2-2019,21:22:0,8,B,FH,even,first,two,C,7-12,c-d-e-f,thirds of the wheel,11-30-23-10
-2-2-2019,20:57:0,21,R,SH,odd,second,three,G,19-24,l-n,neighbours of zero,19-4-2-25
-2-2-2019,19:57:0,27,R,SH,odd,third,three,I,25-30,p-r,thirds of the wheel,34-6-13-36
-2-2-2019,21:22:0,8,B,FH,even,first,two,C,7-12,c-d-e-f,thirds of the wheel,11-30-23-10
-2-2-2019,20:43:0,2,B,FH,even,first,two,A,1-6,a-b,neighbours of zero,4-21-25-17
-2-2-2019,20:59:0,32,R,SH,even,third,two,K,31-36,s-t-u-v,"neighbours of zero, zero game",26-0-15-19
-2-2-2019,21:22:0,8,B,FH,even,first,two,C,7-12,c-d-e-f,thirds of the wheel,11-30-23-10
-2-2-2019,20:1:0,17,B,FH,odd,second,two,F,13-18,i-j-k-l,the orphans,2-25-34-6
-2-2-2019,20:54:0,20,B,SH,even,second,two,G,19-24,k-l-m-n,the orphans,33-1-14-31
-2-2-2019,20:8:0,22,B,SH,even,second,one ,H,19-24,m-o,neighbours of zero,31-9-18-29
-2-2-2019,20:10:0,1,R,FH,odd,first,one ,A,1-6,a,the orphans,16-33-20-14
-2-2-2019,20:8:0,22,B,SH,even,second,one ,H,19-24,m-o,neighbours of zero,31-9-18-29
-2-2-2019,21:4:0,34,R,SH,even,third,one ,L,31-36,u,the orphans,25-17-6-27
-2-2-2019,20:6:0,29,B,SH,odd,third,two,G,25-30,q-r-s-t,neighbours of zero,22-18-7-28
-2-2-2019,20:23:0,25,R,SH,odd,third,one ,I,25-30,o-q,neighbours of zero,21-2-17-34
-2-2-2019,20:3:0,24,B,SH,even,second,three,H,19-24,n-p,thirds of the wheel,10-5-16-33
-2-2-2019,21:18:0,5,R,FH,odd,first,two,B,1-6,a-b-c-d,thirds of the wheel,23-10-24-16
-2-2-2019,20:5:0,6,B,FH,even,first,three,B,1-6,b-d,the orphans,17-34-27-13
-2-2-2019,21:4:0,34,R,SH,even,third,one ,L,31-36,u,the orphans,25-17-6-27
-2-2-2019,20:37:0,15,B,FH,odd,second,three,E,13-18,h-j,"neighbours of zero, zero game",0-32-19-4
-2-2-2019,20:11:0,16,R,FH,even,second,one ,F,13-18,I-k,thirds of the wheel,5-24-33-1
-2-2-2019,20:30:0,28,B,SH,even,third,one ,G,25-30,q-s,neighbours of zero,29-7-12-35
-2-2-2019,20:0:0,11,B,FH,odd,first,two,D,7-12,e-f-g-h,thirds of the wheel,13-26-30-8
-2-2-2019,20:6:0,29,B,SH,odd,third,two,G,25-30,q-r-s-t,neighbours of zero,22-18-7-28
-2-2-2019,21:31:0,13,B,FH,odd,second,one ,E,13-18,g-i,thirds of the wheel,6-27-36-11
-2-2-2019,19:57:0,27,R,SH,odd,third,three,I,25-30,p-r,thirds of the wheel,34-6-13-36
-2-2-2019,19:56:0,30,R,SH,even,third,three,G,25-30,r-t,thirds of the wheel,36-11-8-23
-2-2-2019,20:46:0,35,B,SH,odd,third,two,L,31-36,u-v,"neighbours of zero, zero game",28-12-3-26
-2-2-2019,21:4:0,34,R,SH,even,third,one ,L,31-36,u,the orphans,25-17-6-27
-2-2-2019,20:49:0,7,R,FH,odd,first,one ,C,7-12,c-e,neighbours of zero,18-29-28-19
-2-2-2019,21:4:0,34,R,SH,even,third,one ,L,31-36,u,the orphans,25-17-6-27
-2-2-2019,21:24:0,23,R,SH,odd,second,two,H,19-24,m-n-o-p,thirds of the wheel,30-8-10-5
-2-2-2019,20:50:0,26,B,SH,even,third,two,I,25-30,o-p-q-s,"neighbours of zero, zero game",35-3-0-32
-2-2-2019,21:22:0,8,B,FH,even,first,two,C,7-12,c-d-e-f,thirds of the wheel,11-30-23-10
-2-2-2019,21:18:0,5,R,FH,odd,first,two,B,1-6,a-b-c-d,thirds of the wheel,23-10-24-16
-2-2-2019,20:3:0,24,B,SH,even,second,three,H,19-24,n-p,thirds of the wheel,10-5-16-33
-2-2-2019,20:23:0,25,R,SH,odd,third,one ,I,25-30,o-q,neighbours of zero,21-2-17-34
-2-2-2019,21:18:0,5,R,FH,odd,first,two,B,1-6,a-b-c-d,thirds of the wheel,23-10-24-16
-2-2-2019,20:6:0,29,B,SH,odd,third,two,G,25-30,q-r-s-t,neighbours of zero,22-18-7-28
-2-2-2019,20:1:0,17,B,FH,odd,second,two,F,13-18,i-j-k-l,the orphans,2-25-34-6
-2-2-2019,20:43:0,2,B,FH,even,first,two,A,1-6,a-b,neighbours of zero,4-21-25-17
-2-2-2019,20:7:0,31,B,SH,odd,third,one ,K,31-36,s-u, ,20-14-9-22
-2-2-2019,20:57:0,21,R,SH,odd,second,three,G,19-24,l-n,neighbours of zero,19-4-2-25
-2-2-2019,19:58:0,33,B,SH,odd,third,three,K,31-36,t-v,thirds of the wheel,24-16-1-20
-2-2-2019,20:43:0,2,B,FH,even,first,two,A,1-6,a-b,neighbours of zero,4-21-25-17
-2-2-2019,19:59:0,0,,,,,,"M,N",,,"neighbours of zero, zero game",3-26-32-15
-2-2-2019,20:28:0,18,R,FH,even,second,three,F,13-18,j-l,neighbours of zero,9-22-29-7
-2-2-2019,20:1:0,17,B,FH,odd,second,two,F,13-18,i-j-k-l,the orphans,2-25-34-6
-2-2-2019,20:4:0,10,B,FH,even,first,one ,D,7-12,e-g,thirds of the wheel,8-23-5-24
-2-2-2019,20:1:0,17,B,FH,odd,second,two,F,13-18,i-j-k-l,the orphans,2-25-34-6
-2-2-2019,20:6:0,29,B,SH,odd,third,two,G,25-30,q-r-s-t,neighbours of zero,22-18-7-28
-2-2-2019,21:4:0,34,R,SH,even,third,one ,L,31-36,u,the orphans,25-17-6-27
-2-2-2019,20:26:0,9,R,FH,odd,first,three,C,7-12,d-f,the orphans,14-31-22-18
-2-2-2019,20:49:0,7,R,FH,odd,first,one ,C,7-12,c-e,neighbours of zero,18-29-28-19
-2-2-2019,19:59:0,0,,,,,,"M,N",,,"neighbours of zero, zero game",3-26-32-15
-2-2-2019,20:4:0,10,B,FH,even,first,one ,D,7-12,e-g,thirds of the wheel,8-23-5-24
-2-2-2019,20:59:0,32,R,SH,even,third,two,K,31-36,s-t-u-v,"neighbours of zero, zero game",26-0-15-19
-2-2-2019,20:43:0,2,B,FH,even,first,two,A,1-6,a-b,neighbours of zero,4-21-25-17
-2-2-2019,20:57:0,21,R,SH,odd,second,three,G,19-24,l-n,neighbours of zero,19-4-2-25
-2-2-2019,20:49:0,7,R,FH,odd,first,one ,C,7-12,c-e,neighbours of zero,18-29-28-19
-2-2-2019,20:0:0,11,B,FH,odd,first,two,D,7-12,e-f-g-h,thirds of the wheel,13-26-30-8
-2-2-2019,20:54:0,20,B,SH,even,second,two,G,19-24,k-l-m-n,the orphans,33-1-14-31
-2-2-2019,20:2:0,12,R,FH,even,first,three,D,7-12,f-h,"neighbours of zero, zero game",7-28-35-3
-2-2-2019,20:23:0,25,R,SH,odd,third,one ,I,25-30,o-q,neighbours of zero,21-2-17-34
-2-2-2019,20:4:0,10,B,FH,even,first,one ,D,7-12,e-g,thirds of the wheel,8-23-5-24
-2-2-2019,20:50:0,26,B,SH,even,third,two,I,25-30,o-p-q-s,"neighbours of zero, zero game",35-3-0-32
-2-2-2019,20:49:0,7,R,FH,odd,first,one ,C,7-12,c-e,neighbours of zero,18-29-28-19
-2-2-2019,20:3:0,24,B,SH,even,second,three,H,19-24,n-p,thirds of the wheel,10-5-16-33
-2-2-2019,20:30:0,28,B,SH,even,third,one ,G,25-30,q-s,neighbours of zero,29-7-12-35
-2-2-2019,20:46:0,35,B,SH,odd,third,two,L,31-36,u-v,"neighbours of zero, zero game",28-12-3-26
-2-2-2019,20:30:0,28,B,SH,even,third,one ,G,25-30,q-s,neighbours of zero,29-7-12-35
-2-2-2019,20:26:0,9,R,FH,odd,first,three,C,7-12,d-f,the orphans,14-31-22-18
-2-2-2019,20:43:0,2,B,FH,even,first,two,A,1-6,a-b,neighbours of zero,4-21-25-17
-2-2-2019,20:37:0,15,B,FH,odd,second,three,E,13-18,h-j,"neighbours of zero, zero game",0-32-19-4
-2-2-2019,19:58:0,33,B,SH,odd,third,three,K,31-36,t-v,thirds of the wheel,24-16-1-20
-2-2-2019,20:28:0,18,R,FH,even,second,three,F,13-18,j-l,neighbours of zero,9-22-29-7
-2-2-2019,20:8:0,22,B,SH,even,second,one ,H,19-24,m-o,neighbours of zero,31-9-18-29
-2-2-2019,20:33:0,4,B,FH,even,first,one ,B,1-6,a-c,neighbours of zero,15-19-21-2
-2-2-2019,20:37:0,15,B,FH,odd,second,three,E,13-18,h-j,"neighbours of zero, zero game",0-32-19-4
-2-2-2019,20:7:0,31,B,SH,odd,third,one ,K,31-36,s-u, ,20-14-9-22
-2-2-2019,20:23:0,25,R,SH,odd,third,one ,I,25-30,o-q,neighbours of zero,21-2-17-34
-2-2-2019,20:2:0,12,R,FH,even,first,three,D,7-12,f-h,"neighbours of zero, zero game",7-28-35-3
-2-2-2019,20:33:0,4,B,FH,even,first,one ,B,1-6,a-c,neighbours of zero,15-19-21-2
-2-2-2019,20:11:0,16,R,FH,even,second,one ,F,13-18,I-k,thirds of the wheel,5-24-33-1
-2-2-2019,19:57:0,27,R,SH,odd,third,three,I,25-30,p-r,thirds of the wheel,34-6-13-36
-2-2-2019,20:30:0,28,B,SH,even,third,one ,G,25-30,q-s,neighbours of zero,29-7-12-35
-2-2-2019,20:7:0,31,B,SH,odd,third,one ,K,31-36,s-u, ,20-14-9-22
-2-2-2019,20:28:0,18,R,FH,even,second,three,F,13-18,j-l,neighbours of zero,9-22-29-7
-2-2-2019,20:8:0,22,B,SH,even,second,one ,H,19-24,m-o,neighbours of zero,31-9-18-29
-2-2-2019,20:26:0,9,R,FH,odd,first,three,C,7-12,d-f,the orphans,14-31-22-18
-2-2-2019,19:59:0,0,,,,,,"M,N",,,"neighbours of zero, zero game",3-26-32-15
-2-2-2019,20:3:0,24,B,SH,even,second,three,H,19-24,n-p,thirds of the wheel,10-5-16-33
-2-2-2019,20:23:0,25,R,SH,odd,third,one ,I,25-30,o-q,neighbours of zero,21-2-17-34
-2-2-2019,20:11:0,16,R,FH,even,second,one ,F,13-18,I-k,thirds of the wheel,5-24-33-1
-2-2-2019,20:10:0,1,R,FH,odd,first,one ,A,1-6,a,the orphans,16-33-20-14
-2-2-2019,19:59:0,0,,,,,,"M,N",,,"neighbours of zero, zero game",3-26-32-15
-2-2-2019,20:8:0,22,B,SH,even,second,one ,H,19-24,m-o,neighbours of zero,31-9-18-29
-2-2-2019,20:7:0,31,B,SH,odd,third,one ,K,31-36,s-u, ,20-14-9-22
-2-2-2019,20:6:0,29,B,SH,odd,third,two,G,25-30,q-r-s-t,neighbours of zero,22-18-7-28
-2-2-2019,20:5:0,6,B,FH,even,first,three,B,1-6,b-d,the orphans,17-34-27-13
-2-2-2019,20:4:0,10,B,FH,even,first,one ,D,7-12,e-g,thirds of the wheel,8-23-5-24
-2-2-2019,20:3:0,24,B,SH,even,second,three,H,19-24,n-p,thirds of the wheel,10-5-16-33
-2-2-2019,20:2:0,12,R,FH,even,first,three,D,7-12,f-h,"neighbours of zero, zero game",7-28-35-3
-2-2-2019,20:1:0,17,B,FH,odd,second,two,F,13-18,i-j-k-l,the orphans,2-25-34-6
-2-2-2019,20:0:0,11,B,FH,odd,first,two,D,7-12,e-f-g-h,thirds of the wheel,13-26-30-8
-2-2-2019,19:59:0,0,,,,,,"M,N",,,"neighbours of zero, zero game",3-26-32-15
-2-2-2019,19:58:0,33,B,SH,odd,third,three,K,31-36,t-v,thirds of the wheel,24-16-1-20
-2-2-2019,19:57:0,27,R,SH,odd,third,three,I,25-30,p-r,thirds of the wheel,34-6-13-36
-2-2-2019,19:56:0,30,R,SH,even,third,three,G,25-30,r-t,thirds of the wheel,36-11-8-23
+4-2-2019,21:49:0,24,B,SH,even,second,three,H,19-24,n-p,thirds of the wheel,10-5-16-33
+4-2-2019,21:48:38,1,R,FH,odd,first,one ,A,1-6,a,the orphans,16-33-20-14
+4-2-2019,21:48:0,35,B,SH,odd,third,two,L,31-36,u-v,"neighbours of zero, zero game",28-12-3-26
+4-2-2019,21:47:0,35,B,SH,odd,third,two,L,31-36,u-v,"neighbours of zero, zero game",28-12-3-26
+4-2-2019,21:46:0,26,B,SH,even,third,two,I,25-30,o-p-q-s,"neighbours of zero, zero game",35-3-0-32
+4-2-2019,21:45:0,32,R,SH,even,third,two,K,31-36,s-t-u-v,"neighbours of zero, zero game",26-0-15-19
+4-2-2019,21:44:0,7,R,FH,odd,first,one ,C,7-12,c-e,neighbours of zero,18-29-28-19
+4-2-2019,21:43:40,23,R,SH,odd,second,two,H,19-24,m-n-o-p,thirds of the wheel,30-8-10-5
+4-2-2019,21:43:24,14,R,FH,even,second,two,E,13-18,g-h-i-j,the orphans,1-20-31-9
+4-2-2019,21:43:0,27,R,SH,odd,third,three,I,25-30,p-r,thirds of the wheel,34-6-13-36
+4-2-2019,21:42:56,13,B,FH,odd,second,one ,E,13-18,g-i,thirds of the wheel,6-27-36-11
+4-2-2019,21:42:31,11,B,FH,odd,first,two,D,7-12,e-f-g-h,thirds of the wheel,13-26-30-8
+4-2-2019,21:42:0,20,B,SH,even,second,two,G,19-24,k-l-m-n,the orphans,33-1-14-31
+4-2-2019,21:41:0,31,B,SH,odd,third,one ,K,31-36,s-u, ,20-14-9-22
+4-2-2019,21:40:42,29,B,SH,odd,third,two,G,25-30,q-r-s-t,neighbours of zero,22-18-7-28
+4-2-2019,21:40:0,9,R,FH,odd,first,three,C,7-12,d-f,the orphans,14-31-22-18
+4-2-2019,21:39:0,25,R,SH,odd,third,one ,I,25-30,o-q,neighbours of zero,21-2-17-34
+4-2-2019,21:38:0,28,B,SH,even,third,one ,G,25-30,q-s,neighbours of zero,29-7-12-35
+4-2-2019,21:37:0,4,B,FH,even,first,one ,B,1-6,a-c,neighbours of zero,15-19-21-2
+4-2-2019,21:36:0,27,R,SH,odd,third,three,I,25-30,p-r,thirds of the wheel,34-6-13-36
+4-2-2019,21:35:0,5,R,FH,odd,first,two,B,1-6,a-b-c-d,thirds of the wheel,23-10-24-16
+4-2-2019,21:34:0,17,B,FH,odd,second,two,F,13-18,i-j-k-l,the orphans,2-25-34-6
+4-2-2019,21:33:0,9,R,FH,odd,first,three,C,7-12,d-f,the orphans,14-31-22-18
+4-2-2019,21:32:0,29,B,SH,odd,third,two,G,25-30,q-r-s-t,neighbours of zero,22-18-7-28
+4-2-2019,21:31:0,31,B,SH,odd,third,one ,K,31-36,s-u, ,20-14-9-22
+4-2-2019,21:30:0,25,R,SH,odd,third,one ,I,25-30,o-q,neighbours of zero,21-2-17-34
+4-2-2019,21:29:0,3,R,FH,odd,first,three,A,1-6,b,"neighbours of zero, zero game",12-35-26-0
+4-2-2019,21:28:0,10,B,FH,even,first,one ,D,7-12,e-g,thirds of the wheel,8-23-5-24
+4-2-2019,21:27:56,32,R,SH,even,third,two,K,31-36,s-t-u-v,"neighbours of zero, zero game",26-0-15-19
+4-2-2019,21:27:27,31,B,SH,odd,third,one ,K,31-36,s-u, ,20-14-9-22
+4-2-2019,21:27:0,4,B,FH,even,first,one ,B,1-6,a-c,neighbours of zero,15-19-21-2
+4-2-2019,21:26:0,7,R,FH,odd,first,one ,C,7-12,c-e,neighbours of zero,18-29-28-19
+4-2-2019,21:25:0,10,B,FH,even,first,one ,D,7-12,e-g,thirds of the wheel,8-23-5-24
+4-2-2019,21:24:0,35,B,SH,odd,third,two,L,31-36,u-v,"neighbours of zero, zero game",28-12-3-26
+4-2-2019,21:23:0,32,R,SH,even,third,two,K,31-36,s-t-u-v,"neighbours of zero, zero game",26-0-15-19
+4-2-2019,21:22:29,21,R,SH,odd,second,three,G,19-24,l-n,neighbours of zero,19-4-2-25
+4-2-2019,21:22:0,28,B,SH,even,third,one ,G,25-30,q-s,neighbours of zero,29-7-12-35
+4-2-2019,21:21:0,29,B,SH,odd,third,two,G,25-30,q-r-s-t,neighbours of zero,22-18-7-28
+4-2-2019,21:20:38,11,B,FH,odd,first,two,D,7-12,e-f-g-h,thirds of the wheel,13-26-30-8
+4-2-2019,21:20:13,10,B,FH,even,first,one ,D,7-12,e-g,thirds of the wheel,8-23-5-24
+4-2-2019,21:20:0,5,R,FH,odd,first,two,B,1-6,a-b-c-d,thirds of the wheel,23-10-24-16
+4-2-2019,21:19:0,11,B,FH,odd,first,two,D,7-12,e-f-g-h,thirds of the wheel,13-26-30-8
+4-2-2019,21:18:0,3,R,FH,odd,first,three,A,1-6,b,"neighbours of zero, zero game",12-35-26-0
+4-2-2019,21:17:22,7,R,FH,odd,first,one ,C,7-12,c-e,neighbours of zero,18-29-28-19
+4-2-2019,21:17:7,22,B,SH,even,second,one ,H,19-24,m-o,neighbours of zero,31-9-18-29
+4-2-2019,21:17:0,2,B,FH,even,first,two,A,1-6,a-b,neighbours of zero,4-21-25-17
+4-2-2019,21:16:0,10,B,FH,even,first,one ,D,7-12,e-g,thirds of the wheel,8-23-5-24
+4-2-2019,21:15:19,34,R,SH,even,third,one ,L,31-36,u,the orphans,25-17-6-27
+4-2-2019,21:15:0,29,B,SH,odd,third,two,G,25-30,q-r-s-t,neighbours of zero,22-18-7-28
+4-2-2019,21:14:0,29,B,SH,odd,third,two,G,25-30,q-r-s-t,neighbours of zero,22-18-7-28
+4-2-2019,21:13:0,7,R,FH,odd,first,one ,C,7-12,c-e,neighbours of zero,18-29-28-19
+4-2-2019,21:12:0,32,R,SH,even,third,two,K,31-36,s-t-u-v,"neighbours of zero, zero game",26-0-15-19
+4-2-2019,21:11:0,32,R,SH,even,third,two,K,31-36,s-t-u-v,"neighbours of zero, zero game",26-0-15-19
+4-2-2019,21:10:0,33,B,SH,odd,third,three,K,31-36,t-v,thirds of the wheel,24-16-1-20
+4-2-2019,21:9:0,1,R,FH,odd,first,one ,A,1-6,a,the orphans,16-33-20-14
+4-2-2019,21:8:0,0,,,,,,"M,N",,,"neighbours of zero, zero game",3-26-32-15
+4-2-2019,21:7:0,11,B,FH,odd,first,two,D,7-12,e-f-g-h,thirds of the wheel,13-26-30-8
+4-2-2019,21:6:0,10,B,FH,even,first,one ,D,7-12,e-g,thirds of the wheel,8-23-5-24
+4-2-2019,21:5:0,6,B,FH,even,first,three,B,1-6,b-d,the orphans,17-34-27-13
+4-2-2019,21:4:0,15,B,FH,odd,second,three,E,13-18,h-j,"neighbours of zero, zero game",0-32-19-4
+4-2-2019,21:3:0,4,B,FH,even,first,one ,B,1-6,a-c,neighbours of zero,15-19-21-2
+4-2-2019,21:2:0,27,R,SH,odd,third,three,I,25-30,p-r,thirds of the wheel,34-6-13-36
+4-2-2019,21:1:0,17,B,FH,odd,second,two,F,13-18,i-j-k-l,the orphans,2-25-34-6
+4-2-2019,21:0:0,28,B,SH,even,third,one ,G,25-30,q-s,neighbours of zero,29-7-12-35
+4-2-2019,20:59:0,19,R,SH,odd,second,one ,G,19-24,k-m,neighbours of zero,32-15-4-21
+4-2-2019,20:58:0,23,R,SH,odd,second,two,H,19-24,m-n-o-p,thirds of the wheel,30-8-10-5
+4-2-2019,20:57:0,27,R,SH,odd,third,three,I,25-30,p-r,thirds of the wheel,34-6-13-36
+4-2-2019,20:56:0,5,R,FH,odd,first,two,B,1-6,a-b-c-d,thirds of the wheel,23-10-24-16
+4-2-2019,20:55:0,30,R,SH,even,third,three,G,25-30,r-t,thirds of the wheel,36-11-8-23
+4-2-2019,20:54:0,29,B,SH,odd,third,two,G,25-30,q-r-s-t,neighbours of zero,22-18-7-28
+4-2-2019,20:53:44,2,B,FH,even,first,two,A,1-6,a-b,neighbours of zero,4-21-25-17
+4-2-2019,20:53:0,21,R,SH,odd,second,three,G,19-24,l-n,neighbours of zero,19-4-2-25
+4-2-2019,20:52:0,2,B,FH,even,first,two,A,1-6,a-b,neighbours of zero,4-21-25-17
+4-2-2019,20:51:0,13,B,FH,odd,second,one ,E,13-18,g-i,thirds of the wheel,6-27-36-11
+4-2-2019,20:50:5,33,B,SH,odd,third,three,K,31-36,t-v,thirds of the wheel,24-16-1-20
+4-2-2019,20:49:0,18,R,FH,even,second,three,F,13-18,j-l,neighbours of zero,9-22-29-7
+4-2-2019,20:48:58,29,B,SH,odd,third,two,G,25-30,q-r-s-t,neighbours of zero,22-18-7-28
+4-2-2019,20:48:50,11,B,FH,odd,first,two,D,7-12,e-f-g-h,thirds of the wheel,13-26-30-8
+4-2-2019,20:48:0,29,B,SH,odd,third,two,G,25-30,q-r-s-t,neighbours of zero,22-18-7-28
