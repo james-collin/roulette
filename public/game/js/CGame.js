@@ -137,7 +137,9 @@ function CGame(oData){
 
         // _iNumberExtracted = this._generateWinLoss();
         _iNumberExtracted = num;
-        _aNumExtractedHistory.push(_iNumberExtracted);
+        // _aNumExtractedHistory.push(_iNumberExtracted);
+        _aNumExtractedHistory = [_iNumberExtracted].concat(_aNumExtractedHistory);
+        // _aNumExtractedHistory.splice(0, 0, _iNumberExtracted);
 
         _iTimeElaps = 0;
         _iFactor = 0;
@@ -356,7 +358,9 @@ function CGame(oData){
         
         iFicheValue=s_oGameSettings.getFicheValues(iIndexFicheSelected);
         _aBetWinHistory.push(iBetWin);
+        console.log(_aBetWinHistory);
         _aNumFicheHistory.push(iNumFiches);
+        console.log(_aNumFicheHistory);
         
         
         var iCurBet=_oMySeat.getCurBet();
