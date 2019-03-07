@@ -279,12 +279,13 @@ apiRoutes.get('/game/user', function(req, res) {
 		if(!user) console.log('No user found');
 		else{
 			console.log('User founddd');
-			WonStore.find({}).sort({date: -1}).limit(20).exec(function(err, nums) {
+			WonStore.find({}).sort({date: -1}).limit(19).exec(function(err, nums) {
 				if(err) throw err;
 				let res_nums = nums.map((num) => {
 					return num['won'];
 				});
 				console.log(res_nums);
+				res_nums.reverse();
 				console.log();
 				res.json({ success: true, credit: user.credit, history: res_nums});
 			})
