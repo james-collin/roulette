@@ -285,7 +285,7 @@ apiRoutes.get('/game/user', function(req, res) {
 					return num['won'];
 				});
 				console.log(res_nums);
-				res_nums.reverse();
+				// res_nums.reverse();
 				console.log();
 				res.json({ success: true, credit: user.credit, history: res_nums});
 			})
