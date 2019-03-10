@@ -139,7 +139,12 @@ function CGame(oData){
         _iNumberExtracted = num;
         // _aNumExtractedHistory.push(_iNumberExtracted);
         _aNumExtractedHistory = [_iNumberExtracted].concat(_aNumExtractedHistory);
+        console.log(_aNumExtractedHistory);
+        _aNumExtractedHistory.splice(-1,1)
+        console.log(_aNumExtractedHistory);
+
         // _aNumExtractedHistory.splice(0, 0, _iNumberExtracted);
+        // _oInterface.refreshNumExtracted(_aNumExtractedHistory);
 
         _iTimeElaps = 0;
         _iFactor = 0;

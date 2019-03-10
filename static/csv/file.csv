@@ -1,4 +1,13 @@
 date,time,number,colour,1-18 / 19-36,odd / even,dozen,column,three,six,corners,call,neighbours
+10-2-2019,18:30:0,22,B,SH,even,second,one ,H,19-24,m-o,neighbours of zero,31-9-18-29
+10-2-2019,18:27:0,28,B,SH,even,third,one ,G,25-30,q-s,neighbours of zero,29-7-12-35
+10-2-2019,18:24:0,21,R,SH,odd,second,three,G,19-24,l-n,neighbours of zero,19-4-2-25
+8-2-2019,1:28:0,12,R,FH,even,first,three,D,7-12,f-h,"neighbours of zero, zero game",7-28-35-3
+8-2-2019,1:27:0,12,R,FH,even,first,three,D,7-12,f-h,"neighbours of zero, zero game",7-28-35-3
+8-2-2019,1:26:0,24,B,SH,even,second,three,H,19-24,n-p,thirds of the wheel,10-5-16-33
+8-2-2019,1:25:0,18,R,FH,even,second,three,F,13-18,j-l,neighbours of zero,9-22-29-7
+8-2-2019,1:24:0,11,B,FH,odd,first,two,D,7-12,e-f-g-h,thirds of the wheel,13-26-30-8
+8-2-2019,1:23:0,32,R,SH,even,third,two,K,31-36,s-t-u-v,"neighbours of zero, zero game",26-0-15-19
 5-2-2019,12:28:0,22,B,SH,even,second,one ,H,19-24,m-o,neighbours of zero,31-9-18-29
 5-2-2019,12:27:0,13,B,FH,odd,second,one ,E,13-18,g-i,thirds of the wheel,6-27-36-11
 5-2-2019,12:26:0,17,B,FH,odd,second,two,F,13-18,i-j-k-l,the orphans,2-25-34-6
