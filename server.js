@@ -343,7 +343,7 @@ function generateRandNum(){
 // generateRandNum();
 
 var cron = require('node-cron');
-cron.schedule('* * * * *', () => {
+cron.schedule('*/3 * * * *', () => {
 	generateRandNum();
 });
 
