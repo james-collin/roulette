@@ -423,3 +423,20 @@ apiRoutes.get('/csv', function(req, res) {
 
 
 
+app.get('/csv', function(req, res) {
+	csvDump();
+	var workbook = new Excel.Workbook();
+	workbook.csv.readFile(csvFilePath)
+	.then(function(worksheet) {
+	    // use workbook or worksheet
+	    workbook.xlsx.writeFile(xlsFilePath)
+	    .then(function() {
+	        console.log('DONE');
+	        res.sendFile(path.join(__dirname, xlsFilePath));
+	    });
+	});
+
+})
+
+
+
