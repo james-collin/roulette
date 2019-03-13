@@ -11,6 +11,15 @@ function CBetTableButton(iXPos,iYPos,oSprite,szName,oContainer,bSelfEnlight){
     var _aNumbersToBet;
     var _oContainer;
 
+    var CheckIfAuth = function(){
+        return $.ajax({
+            url: "/api/check",
+            headers: {
+                'x-access-token': getCookie('token')
+            }
+        });
+    }
+
     
     this._init =function(iXPos,iYPos,oSprite,szName,oContainer,bSelfEnlight){
         _bSelfEnlight = bSelfEnlight;
@@ -103,10 +112,26 @@ function CBetTableButton(iXPos,iYPos,oSprite,szName,oContainer,bSelfEnlight){
     };
     
     this.buttonDown = function(){
-       if(_aCbCompleted[ON_MOUSE_DOWN]){
-           _aCbCompleted[ON_MOUSE_DOWN].call(_aCbOwner[ON_MOUSE_DOWN],
-                                                {button:_szName,numbers:_aNumbersToBet,bet_mult:_iBetMultiplier,bet_win:_iBetWin,num_fiches:1},false);
-       }
+        var checkAuth = CheckIfAuth();
+        console.log(checkAuth);
+
+        checkAuth.done(function(res) {
+            console.log(res);
+            if(_aCbCompleted[ON_MOUSE_DOWN]){
+               _aCbCompleted[ON_MOUSE_DOWN].call(_aCbOwner[ON_MOUSE_DOWN],
+                                                    {button:_szName,numbers:_aNumbersToBet,bet_mult:_iBetMultiplier,bet_win:_iBetWin,num_fiches:1},false);
+           }
+        }).fail(function(err){
+            if(err.status == 403){
+                console.warn('ABORT!!');
+                var r = confirm('Please login or signup');
+                if (r == true) {
+                    window.location= '/login';
+                } else {
+                    // txt = "You pressed Cancel!";
+                }
+            }
+        });
     };
     
     this.mouseOver = function(){

@@ -284,7 +284,7 @@
             }
             function showOrHideGame(attr){
                 if(attr == 'play'){
-                    CheckIfAuth();
+                    // CheckIfAuth();
                     getUserData();
                     jQuery('#canvas').show();
                 }
@@ -390,9 +390,12 @@
                         'x-access-token': getCookie('token')
                     }
                 }).done(function(res) {
-                   if(res.success) initializeGame((res.credit) ? res.credit : 1000, res.history);
+                   if(res.success) {
+                        initializeGame((res.credit) ? res.credit : 1000, res.history);
+                    }
                 }).fail(function(err){
                     console.log(err);
+                    initializeGame(1000, []);
                 });
             }
 
