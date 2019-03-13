@@ -395,7 +395,19 @@
                     }
                 }).fail(function(err){
                     console.log(err);
-                    initializeGame(1000, []);
+                    $.ajax({
+                        url: "/game/history",
+                        headers: {
+                            'x-access-token': getCookie('token')
+                        }
+                    }).done(function(res) {
+                        console.log(res);
+                       if(res.success) {
+                            initializeGame(1000, res.history);
+                        }
+                    }).fail(function(err){
+                        console.log(err);
+                    });
                 });
             }
 

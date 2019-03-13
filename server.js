@@ -436,7 +436,22 @@ app.get('/csv', function(req, res) {
 	    });
 	});
 
-})
+});
+
+app.get('/game/history', function(req, res) {
+	console.log('fetch history');
+	WonStore.find({}).sort({date: -1}).limit(19).exec(function(err, nums) {
+		if(err) throw err;
+		let res_nums = nums.map((num) => {
+			return num['won'];
+		});
+		console.log(res_nums);
+		// res_nums.reverse();
+		console.log();
+		res.json({success: true, history: res_nums});
+	});
+	console.log(req.body);
+});
 
 
 
