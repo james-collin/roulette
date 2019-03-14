@@ -90,6 +90,15 @@
             .jumbotron .container{
                 max-width: 75%;
             }
+            .counts{
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                margin: 20px;
+            }
+            .counts>span{
+                padding-left: 10px;
+            }
 
         </style>
         <style>.codegena{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.codegena iframe{position:absolute;top:0;left:0;width:100%;height:100%;}/*Youtube Embed Code : Created with Codegena.com */</style>
@@ -115,8 +124,8 @@
                                 <ul class="nav navbar-nav" id="nav-buttons">
                                     <li data-action="aboutus" class="active"><a href="#">About us</a></li>
                                     <li data-action="see"><a href="#">See</a></li>
-                                    <li data-action="play"><a href="#">Play</a></li>
-                                    <li data-action="download"><a href="#">Download</a></li>
+                                    <li data-action="play"><a href="#">Play/Observe</a></li>
+                                    <li data-action="download"><a href="#">Statistics</a></li>
                                     <li data-action="info"><a href="#">Info for Investors</a></li>
                                     <li data-action="contacts"><a href="#">Contacts</a></li>
                                 </ul>
@@ -132,6 +141,7 @@
 
     <div style="display: none;" data-page="aboutus">
         <h1>About Us</h1>
+        <h3 class="counts">Hits:<span id="aboutus-count"></span></h3>
         <section class="jumbotron" style="">
             <div class="container">
                 <div class="row ">
@@ -155,7 +165,9 @@
     </div>
 
     <div style="display: none;text-align: center;" data-page="download">
-        <h1>Download</h1>
+        <h1>Statistics</h1>
+        <h3 class="counts">Download count:<span id="download-count"></span></h3>
+        
         <section class="jumbotron" style="">
             <div class="container">
                 <div class="row ">
@@ -282,7 +294,36 @@
                 //     console.log(err);
                 // });
             }
+            function storeLog(name){
+                $.ajax({
+                    url: "/game/count",
+                    method: 'POST',
+                    data: {
+                        name: name
+                    }
+                }).done(function(res) {
+                    console.log(res);
+                }).fail(function(err){
+                    console.log(err);
+                });
+            }
+
+            function getCounts(){
+                $.ajax({
+                    url: "/game/count?name=[\"download\",\"aboutus\"]",
+                }).done(function(res) {
+                   if(res.success) {
+                        console.log(res);
+                        document.getElementById('aboutus-count').innerHTML = res.data.aboutus;
+                        document.getElementById('download-count').innerHTML = res.data.download;
+                    }
+                }).fail(function(err){
+                    console.log(err);
+                });
+            }
+
             function showOrHideGame(attr){
+                getCounts();
                 if(attr == 'play'){
                     // CheckIfAuth();
                     getUserData();
@@ -291,6 +332,9 @@
                 else jQuery('#canvas').hide();
                 jQuery('[data-page]').hide();
                 jQuery('[data-page="' + attr +'"]').show();
+                if(attr == 'aboutus'){
+                    storeLog('aboutus');
+                }
             }
             jQuery('#nav-buttons li').each(function(itr, li){
                 jQuery(li).click(function(){
@@ -446,7 +490,7 @@
             // });
             var pusher = new Pusher('e59099f1080388ad9ae4', {
               cluster: 'ap2',
-              authEndpoint: '/api/pusher/auth',
+              // authEndpoint: '/api/pusher/auth',
               // auth: {
               //       headers: {
               //           'x-access-token': window.location.search.replace('?token=', '')

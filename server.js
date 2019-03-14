@@ -9,7 +9,8 @@ var fs          = require('fs');
 var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var config = require('./config'); // get our config file
 var User   = require('./app/models/user'); // get our mongoose model
-var WonStore   = require('./app/models/won_number'); // get our mongoose model
+var WonStore = require('./app/models/won_number'); // get our mongoose model
+var Counter = require('./app/models/counter'); // get our mongoose model
 var path = require('path');
 var cookieParser = require('cookie-parser')
 var db_utils = require('./app/utils/db.js')
@@ -23,7 +24,7 @@ require('dotenv').config();
 
 
 // configuration ===================================================
-var port = process.env.PORT || 8080; // used to create, sign, and verify tokens
+var port = process.env.PORT || 8080; 
 mongoose.connect(config.database); // connect to database
 app.set('superSecret', config.secret); // secret variable
 
@@ -432,6 +433,7 @@ app.get('/csv', function(req, res) {
 	    workbook.xlsx.writeFile(xlsFilePath)
 	    .then(function() {
 	        console.log('DONE');
+	        saveLog('download')
 	        res.sendFile(path.join(__dirname, xlsFilePath));
 	    });
 	});
@@ -452,6 +454,63 @@ app.get('/game/history', function(req, res) {
 	});
 	console.log(req.body);
 });
+
+function saveLog(name, cb){
+	console.log(name);
+	var count = new Counter({ 
+		name: name
+	});
+	console.log(count);
+	count.save(function(err) {
+		if (err) throw err;
+		console.log('Count entry added');
+		if(cb)	cb(true);
+	});
+}
+
+function getLog(name, cb){
+	console.log(name);
+	console.log(typeof(name));
+	try{
+		console.log(JSON.parse(name));
+		(Array.isArray(JSON.parse(name))) ? console.log('ARRAY') : console.log('NOT ARRAY')
+		name = JSON.parse(name);
+	}
+	catch(e){
+		console.log('Not able to parse');
+	}
+	console.log(name);
+	Counter.find({name: name}, function(err, logs) {
+		if (err) throw err;
+		let res = {};
+		logs.forEach((log) => {
+			if(res[log.name]) res[log.name] += 1;
+			else res[log.name] = 1;
+		});
+		console.log(res);
+
+
+		if(cb) cb(res);
+
+	});
+}
+
+
+app.post('/game/count', function(req, res) {
+	saveLog(req.body.name, function(){
+		res.json({ success: true });
+	});
+});
+
+app.get('/game/count', function(req, res) {
+	var name = req.param('name');
+	console.log(name);
+	
+	getLog(name, function(count){
+		res.json({ success: true, data: count});
+	});
+});
+
 
 
 
