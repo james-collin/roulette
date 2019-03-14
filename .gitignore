@@ -30,4 +30,4 @@ node_modules
 
 data
 .env*
-staic/csv/*
+static/csv/*
