@@ -381,8 +381,7 @@ var csvDump = function(res = false){
 		let wons = orderedNums.map((num) => {
 			let won = JSON.parse(JSON.stringify(winning_num_constants[num['won']])),
 				date = num['date'];
-			// console.log(typeof(new Date(num['date'])));
-			won['date'] = date.getDate() + '-' + date.getMonth() + '-' + date.getFullYear();
+			won['date'] = date.getDate() + '-' + (date.getMonth()+1) + '-' + date.getFullYear();
 			won['time'] = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
 			return won;
 		});
@@ -397,11 +396,6 @@ var csvDump = function(res = false){
 		})
 	});
 
-
-	// csvWriter.writeRecords(records)       // returns a promise
-	// .then(() => {
-	//     console.log('...Done');
-	// });
 }
 csvDump();
 
