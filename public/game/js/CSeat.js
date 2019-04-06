@@ -28,7 +28,7 @@ function CSeat(){
             if(err.status == 403){
                 console.warn('ABORT!!');
                 alert('Please login');
-                window.location= '/login';
+                // window.location= '/login';
             }
         });
     }
