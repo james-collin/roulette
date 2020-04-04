@@ -219,10 +219,6 @@ apiRoutes.get('/users', function(req, res) {
 });
 
 apiRoutes.get('/check', function(req, res) {
-	console.log('check');
-	console.log(db_utils);	
-	// console.log(req.cookies);
-	console.log(req.decoded);
 	res.json(req.decoded);
 });
 
@@ -230,11 +226,9 @@ apiRoutes.get('/check', function(req, res) {
 // app.use('/game', [checkAuth(), express.static('public')]);
 
 apiRoutes.get('/game', function(req, res) {
-	console.log('game');
 	var token = req.body.token || req.param('token') || req.headers['x-access-token'];
 	// res.redirect('/game/?token=' + token);
 	fs.readFile('public/game/index.html',function (err, data){
-		console.log(data);
 		res.writeHead(200, {'Content-Type': 'text/html','Content-Length':data.length, 'x-access-token': token});
 		res.write(data);
 		res.end();
@@ -256,8 +250,6 @@ apiRoutes.post('/pusher/auth', function(req, res) {
 });
 
 apiRoutes.post('/game/user', function(req, res) {
-	console.log('req.cookie');
-	console.log(req.decoded);
 	db_utils.findUserByID(req.decoded.id, function(user){
 		if(!user) console.log('No user found');
 		else{
@@ -270,34 +262,26 @@ apiRoutes.post('/game/user', function(req, res) {
 			})
 		}
 	});
-
-	console.log(req.user);
-	console.log(req.body);
 });
 
 apiRoutes.get('/game/user', function(req, res) {
 	db_utils.findUserByID(req.decoded.id, function(user){
 		if(!user) console.log('No user found');
 		else{
-			console.log('User founddd');
+			console.log('User found');
 			WonStore.find({}).sort({date: -1}).limit(19).exec(function(err, nums) {
 				if(err) throw err;
 				let res_nums = nums.map((num) => {
 					return num['won'];
 				});
-				console.log(res_nums);
 				// res_nums.reverse();
-				console.log();
 				res.json({ success: true, credit: user.credit, history: res_nums});
 			})
 		}
 	});
-	console.log(req.body);
 });
 
-console.log(process.env.pusher_app_id);
-console.log(process.env.pusher_key);
-console.log(process.env.pusher_secret);
+
 var pusher = new Pusher({
   appId: process.env.pusher_app_id,
   key: process.env.pusher_key,
@@ -314,7 +298,6 @@ function getRandomInt(min, max) {
 }
 
 function generateRandNum(){
-	console.log('sending');
 	var random_nums = [];
 	for(var i=0;i<3;i++){
 		random_nums.push(getRandomInt(0,36));
@@ -443,7 +426,6 @@ app.get('/game/history', function(req, res) {
 		});
 		console.log(res_nums);
 		// res_nums.reverse();
-		console.log();
 		res.json({success: true, history: res_nums});
 	});
 	console.log(req.body);
