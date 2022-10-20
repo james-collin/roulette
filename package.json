@@ -10,7 +10,7 @@
     "express": "^4.13.4",
     "jsonwebtoken": "^5.7.0",
     "mongodb": "^3.1.13",
-    "mongoose": "^4.4.5",
+    "mongoose": "^4.13.21",
     "morgan": "^1.7.0",
     "node-cron": "^2.0.3",
     "pusher": "^2.2.0"
